@@ -1,0 +1,97 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecma features": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "root": true,
+  "extends": ["next", "eslint:recommended", "prettier", "next/core-web-vitals"],
+  "plugins": [
+    "unused-imports",
+    "import",
+    "react",
+    "react-hooks",
+    "prettier",
+    "@typescript-eslint",
+    "storybook"
+  ],
+  "rules": {
+    // 定数宣言を使用することを推奨
+    "prefer-const": "warn", 
+    // var の使用を禁止
+    "no-var": "warn",
+    // 未使用の変数を警告
+    "no-unused-vars": "warn",
+    // オブジェクトリテラルの短縮構文を推奨
+    "object-shorthand": "warn",
+    // 配列の型指定
+    "@typescript-eslint/array-type": [
+      "warn",
+      {
+        "default": "array"
+      }
+    ],
+    // React フラグメントの短縮構文
+    "react/jsx-fragments": ["warn", "syntax"],
+    // React のコンポーネントのファイル名の拡張子
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": ["ts", ".tsx"]
+      }
+    ],
+    // React Hooks のルールをチェック
+    "react-hooks/rules-of-hooks": "error",
+    // React Hooks のルールをチェック
+    "react-hooks/exhaustive-deps": "warn",
+    // React がインポートされていることを確認
+    "react/react-in-jsx- scope": "off",
+    // prop-types をチェック
+    "react/prop-types": "off",
+    // Prettier のルールをチェック
+    "prettier/prettier": "warn",
+    // 未使用のインポートをチェック
+    "unused-imports/no-unused-imports": "error",
+    // import 文の順序をチェック
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          // Node.js のモジュール
+          "builtin",
+          // 外部モジュール
+          "external",
+          // 親ディレクトリのモジュール
+          "parent",
+          // 同じディレクトリのモジュール
+          "sibling",
+          // インデックスファイル
+          "index",
+          // オブジェクトのプロパティ
+          "object",
+          // 型
+          "type",
+          // 内部モジュール
+          "internal"
+        ],
+        // アルファベット順
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+    "sort-imports": [
+      "error",
+      {
+        "ignoreDeclarationSort": true
+      }
+    ]
+  }
+}
