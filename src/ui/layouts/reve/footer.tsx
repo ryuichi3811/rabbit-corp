@@ -7,5 +7,3 @@ export const Footer = () => {
     </footer>
   );
 };
-
-export const footerHeight = 320;
