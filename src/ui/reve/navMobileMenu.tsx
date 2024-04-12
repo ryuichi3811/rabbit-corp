@@ -4,7 +4,13 @@ import Link from 'next/link';
 import { reveNav } from '../../utils';
 import { Button } from '.';
 
-export const NavMobileMenu = ({ isOpened }: { isOpened: boolean }) => {
+export const NavMobileMenu = ({
+  isOpened,
+  onClick,
+}: {
+  isOpened: boolean;
+  onClick: () => void;
+}) => {
   return (
     <div
       className={clsx(
@@ -14,7 +20,7 @@ export const NavMobileMenu = ({ isOpened }: { isOpened: boolean }) => {
       )}
     >
       {/* ロゴ */}
-      <Link className="absolute left-4 top-4" href="/reve">
+      <Link className="absolute left-4 top-4" href="/reve" onClick={onClick}>
         <Image src={'/svgs/reve/reve.svg'} width={72} height={72} alt="" />
       </Link>
       {/* コンテンツ */}
@@ -26,7 +32,7 @@ export const NavMobileMenu = ({ isOpened }: { isOpened: boolean }) => {
                 key={n.label}
                 className="text-reve-color duration-300 [&+li]:mt-4"
               >
-                <Link href={n.href}>
+                <Link href={n.href} onClick={onClick}>
                   {n.label === 'contact' ? (
                     <Button
                       variant={'blur'}

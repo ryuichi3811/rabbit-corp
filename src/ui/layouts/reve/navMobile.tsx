@@ -4,14 +4,17 @@ import { HamburgerButton, NavMobileMenu } from '@/ui/reve';
 
 export const NavMobile = () => {
   const [isOpened, setIsOpened] = useState(false);
+  const handleClick = () => {
+    setIsOpened(!isOpened);
+  };
   return (
     <div className="relative">
       <HamburgerButton
-        onClick={() => setIsOpened(!isOpened)}
+        onClick={handleClick}
         color="default"
         isOpened={isOpened}
       />
-      <NavMobileMenu isOpened={isOpened} />
+      <NavMobileMenu isOpened={isOpened} onClick={handleClick} />
     </div>
   );
 };
