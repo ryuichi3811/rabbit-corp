@@ -1,9 +1,9 @@
 import parse from 'html-react-parser';
 import Link from 'next/link';
 import { FailureNews, News } from '@/providers';
-import { Button } from '@/ui/reve';
+import { Button } from '@/ui';
 
-import { RichEditorLayout } from '@/ui/reve';
+import { RichEditorLayout } from '@/ui';
 import { pmReve } from '@/utils';
 
 export const Body = ({

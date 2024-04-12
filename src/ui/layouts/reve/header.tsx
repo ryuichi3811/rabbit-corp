@@ -1,5 +1,5 @@
-import { NavMobile, NavScreen } from '@/ui/layouts/reve';
-import { LogoReve } from '@/ui/reve';
+import { NavMobileMenu, NavScreenMenu } from '.';
+import { LogoReve } from '@/ui';
 
 export const Header = async () => {
   return (
@@ -7,8 +7,8 @@ export const Header = async () => {
       {/* ロゴ */}
       <LogoReve />
       {/* ナビゲーション */}
-      <NavMobile />
-      <NavScreen />
+      <NavMobileMenu />
+      <NavScreenMenu />
     </header>
   );
 };

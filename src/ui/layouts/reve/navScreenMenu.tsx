@@ -2,7 +2,7 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { pm, reveNav } from '../../utils';
+import { pm, reveNav } from '../../../utils';
 
 export const NavScreenMenu = ({ path }: { path?: string }) => {
   const hookPathname = usePathname();

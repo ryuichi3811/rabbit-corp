@@ -1,7 +1,7 @@
 'use client';
 import { cva } from 'class-variance-authority';
 import clsx from 'clsx';
-import { cn } from '../../utils';
+import { cn } from '../utils';
 
 const borderVariants = cva(
   'absolute h-[1px] duration-300 drop-shadow-[2px_2px_7px_#e4d8bb]',

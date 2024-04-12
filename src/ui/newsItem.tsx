@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { News } from '@/providers';
-import { AspectRatio } from '@/ui/reve';
+import { AspectRatio } from '@/ui';
 
 export const NewsItem = ({
   dict,

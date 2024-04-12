@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { Button } from '@/ui/reve';
+import { Button } from '@/ui';
 
 const NotFound = () => {
   const params = useParams();

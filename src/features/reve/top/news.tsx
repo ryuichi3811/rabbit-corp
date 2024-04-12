@@ -1,8 +1,7 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 import { News, fetchNewsCntList, qReve } from '@/providers/microcms';
-import { NewsItem } from '@/ui/layouts/reve';
-import { Button } from '@/ui/reve';
+import { Button, NewsItem } from '@/ui';
 
 export const LatestNews = async ({
   dict,

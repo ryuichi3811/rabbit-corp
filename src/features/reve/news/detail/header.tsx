@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { FailureNews, News } from '@/providers';
-import { AspectRatio } from '@/ui/reve';
+import { AspectRatio } from '@/ui';
 
 export const Header = ({
   content,
