@@ -1,7 +1,8 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 import { News, fetchNewsCntList, qReve } from '@/providers/microcms';
-import { Button, NewsItem } from '@/ui';
+import { Button, NewsItemVertical } from '@/ui';
+import { pmReve } from '@/utils';
 
 export const LatestNews = async ({
   dict,
@@ -15,9 +16,10 @@ export const LatestNews = async ({
   // お知らせコンテンツの取得
   const { contents } = await fetchNewsCntList(query);
 
-  // const contentsSample: News[] = [];
-  // contentsSample.push(contents[0]);
-  // contentsSample.push(contents[0]);
+  const contentsSample: News[] = [];
+  contentsSample.push(contents[0]);
+  contentsSample.push(contents[0]);
+  contentsSample.push(contents[0]);
 
   return (
     // <div className="bg-gradient-to-tr from-reve-main to-reve-sub">
@@ -35,9 +37,14 @@ export const LatestNews = async ({
           </h2>
         </div>
         {/* News コンテンツ */}
-        <div className="mt-8 flex w-full flex-wrap justify-center gap-1 overflow-auto px-4 align-baseline md:flex-nowrap md:gap-10">
-          {contents.map((c: News) => (
-            <NewsItem dict={d} content={c} key={c.id} />
+        <div className="mt-8 flex w-full flex-wrap justify-center gap-4 overflow-auto align-baseline md:flex-wrap md:gap-10 xl:gap-16">
+          {contentsSample.map((c: News) => (
+            <NewsItemVertical
+              dict={d}
+              content={c}
+              link={pmReve(d.lang, `/news/${c.id}`)}
+              key={c.id}
+            />
           ))}
         </div>
         {/* News ページ遷移ボタン */}

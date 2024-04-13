@@ -13,7 +13,7 @@ const RichEditorLayout = forwardRef(
     return (
       <div
         className={clsx(
-          '[&_a]:text-blue-500 [&_a]:underline [&_figure]:mx-auto [&_figure]:mb-8 [&_img]:block [&_img]:rounded-lg [&_p]:pb-8 [&_p]:leading-7',
+          '[&_a]:text-indigo-500 [&_a]:underline [&_figure]:mx-auto [&_figure]:mb-8 [&_img]:block [&_img]:rounded-lg [&_p]:pb-8 [&_p]:leading-7',
           className,
         )}
         ref={ref}

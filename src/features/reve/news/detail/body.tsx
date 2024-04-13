@@ -4,7 +4,7 @@ import { FailureNews, News } from '@/providers';
 import { Button } from '@/ui';
 
 import { RichEditorLayout } from '@/ui';
-import { pmReve } from '@/utils';
+import { pmReve } from '@/utils/';
 
 export const Body = ({
   dict,
@@ -18,13 +18,14 @@ export const Body = ({
   return (
     <>
       {/* コンテンツ本文 */}
-      <RichEditorLayout className="mb-20 mt-16 px-4">
-        {d.lang === 'en' ? parse(cnt.body_en) : parse(cnt.body_ja)}
+      <RichEditorLayout className="mt-4">
+        <div className="px-4">
+          {d.lang === 'en' ? parse(cnt.body_en) : parse(cnt.body_ja)}
+        </div>
       </RichEditorLayout>
 
       {/* 一覧に戻る */}
-      <div className="mb-20 flex justify-center">
-        {/* <Link href={`${d.lang}/reve/news`}> */}
+      <div className="my-20 flex justify-center">
         <Link href={pmReve(d.lang, '/news')}>
           <Button size={'lg'} variant={'outline'} className="border-reve-sub">
             {d.reve_news_content_button_text}
