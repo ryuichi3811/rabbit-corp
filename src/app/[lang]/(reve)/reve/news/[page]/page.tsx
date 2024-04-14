@@ -1,8 +1,11 @@
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import * as C from '@/features/reve/news';
 import { fetchNewsCntList, qReve } from '@/providers';
 import { PaginationLayout } from '@/ui/layouts';
-import { Locale, fetchDict, pmReve } from '@/utils';
+import { Locale, fetchDict, mReveNews, pmReve, setMetadata } from '@/utils';
+
+export const metadata: Metadata = setMetadata('Reve News', mReveNews);
 
 const Page = async ({
   params: { lang, page },
