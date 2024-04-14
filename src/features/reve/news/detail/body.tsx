@@ -26,7 +26,7 @@ export const Body = ({
 
       {/* 一覧に戻る */}
       <div className="my-20 flex justify-center">
-        <Link href={pmReve(d.lang, '/news')}>
+        <Link href={pmReve(d.lang, '/news/1')}>
           <Button size={'lg'} variant={'outline'} className="border-reve-sub">
             {d.reve_news_content_button_text}
           </Button>
