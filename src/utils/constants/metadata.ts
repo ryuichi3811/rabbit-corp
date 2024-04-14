@@ -3,3 +3,6 @@ export const mDefault =
 
 export const mReveNews =
   'Reveのお知らせコンテンツでは、最新のニュースを提供しています。';
+
+export const mReveContact =
+  'Reveのお問い合わせページでは、ご質問やお問い合わせを承っております。お気軽にお問い合わせください。';
