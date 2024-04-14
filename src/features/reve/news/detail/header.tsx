@@ -13,12 +13,14 @@ export const Header = ({
   return (
     <>
       {/* ヘッダー */}
-      <div className="mt-12 pl-4">
-        <h1 className="text-4xl font-bold tracking-wider">News</h1>
-        <p className="text-sm">お知らせ</p>
+      <div className="my-12">
+        <h1 className="text-4xl font-bold tracking-wider text-reve-sub md:text-5xl">
+          News
+        </h1>
+        <p className="text-sm md:text-lg">お知らせ</p>
       </div>
       {/* ヘッダー画像 */}
-      <div className="mt-20">
+      <div className="my-8">
         <AspectRatio ratio={8 / 5}>
           <Image
             // src={cnt.head_image.url}
@@ -34,7 +36,7 @@ export const Header = ({
       </div>
 
       {/* カテゴリー & 日付 */}
-      <div className="mt-8 flex items-baseline justify-between px-6">
+      <div className="flex items-baseline justify-between px-6">
         <p className="rounded-md border border-reve-sub bg-reve-sub px-2 py-1 text-xs text-reve-main">
           {cnt.categories_ja}
         </p>
@@ -42,7 +44,7 @@ export const Header = ({
       </div>
 
       {/* タイトル */}
-      <div className="mt-12">
+      <div className="my-12">
         <h2 className="text-xl font-bold drop-shadow-[0px_1px_2px_rgba(120,100,0,.6)] sm:pl-4">
           {cnt && (lang === 'en' ? cnt.title_en : cnt.title_ja)}
         </h2>

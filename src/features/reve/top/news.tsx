@@ -42,13 +42,13 @@ export const LatestNews = async ({
             <NewsItemVertical
               dict={d}
               content={c}
-              link={pmReve(d.lang, `/news/${c.id}`)}
+              link={pmReve(d.lang, `/news/0/${c.id}`)}
               key={c.id}
             />
           ))}
         </div>
         {/* News ページ遷移ボタン */}
-        <Link href="/reve/news">
+        <Link href={pmReve(d.lang, '/news/1')}>
           <Button size={'lg'} className="mt-8">
             {d.reve_top_news_button_text}
           </Button>

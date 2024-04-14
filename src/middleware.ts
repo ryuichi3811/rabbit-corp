@@ -1,7 +1,7 @@
 import { match as matchLocale } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 import { NextResponse } from 'next/server';
-import { url } from './utils';
+import { pmReve } from './utils';
 import type { NextRequest } from 'next/server';
 import { i18n } from '@/utils/i18n';
 
@@ -75,13 +75,17 @@ export async function middleware(request: NextRequest) {
 
   switch (pathname) {
     case `/ja`:
-      return redirect(`${url}ja/reve`);
+      return redirect(pmReve('ja', ''));
     case `/en`:
-      return redirect(`${url}en/reve`);
+      return redirect(pmReve('en', ''));
     case `/ja/reve/about`:
-      return redirect(`${url}ja/reve/about/management`);
+      return redirect(pmReve('ja', '/about/management'));
     case `/en/reve/about`:
-      return redirect(`${url}en/reve/about/management`);
+      return redirect(pmReve('en', '/about/management'));
+    case `/ja/reve/news`:
+      return redirect(pmReve('ja', '/news/1'));
+    case `/en/reve/news`:
+      return redirect(pmReve('en', '/news/1'));
   }
 
   // ニュースコンテンツのURL転送

@@ -1,4 +1,4 @@
-export const local = 'http://192.168.32.134:3000/';
+export const local = 'http://192.168.32.143:3000/';
 export const domain = 'https://rabbit-corp.com/';
 export const url = local;
 export const reve = '/jp/reve';
