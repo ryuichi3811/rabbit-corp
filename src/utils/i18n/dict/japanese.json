@@ -6,5 +6,19 @@
   "reve_top_news_headline": "最新のお知らせ",
   "reve_top_news_button_text": "お知らせ一覧",
   "reve_news_content_button_text": "一覧に戻る",
-  "reve_component_newsItem_text": "詳細を見る"
+  "reve_component_newsItem_text": "詳細を見る",
+  "contact_sending": "送信中",
+  "contact_submit": "送信",
+  "reve_contact_form_name": "お名前",
+  "reve_contact_form_company_name": "会社名",
+  "reve_contact_form_mail": "メールアドレス",
+  "reve_contact_form_tel": "電話番号",
+  "reve_contact_form_category": "件名",
+  "reve_contact_form_category_option1": "マネジメント",
+  "reve_contact_form_category_option2": "ホームページ",
+  "reve_contact_form_category_option3": "その他",
+  "reve_contact_form_content": "お問い合わせ内容",
+  "reve_contact_dialog_title": "送信完了",
+  "reve_contact_dialog_content": "<p>お問い合わせいただきありがとうございます。</p><p>お問い合わせを受け付けました。</p><p>担当者からの連絡をお待ちくださいませ。</p>",
+  "reve_contact_dialog_button_text": "トップに戻る"
 }

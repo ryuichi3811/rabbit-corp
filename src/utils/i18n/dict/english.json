@@ -6,5 +6,19 @@
   "reve_top_news_headline": "LATEST NEWS",
   "reve_top_news_button_text": "View All",
   "reve_news_content_button_text": "All News",
-  "reve_component_newsItem_text": "Read more"
+  "reve_component_newsItem_text": "Read more",
+  "contact_sending": "Sending...",
+  "contact_submit": "Send",
+  "reve_contact_form_name": "Your Name",
+  "reve_contact_form_company_name": "Company Name",
+  "reve_contact_form_mail": "Email address",
+  "reve_contact_form_tel": "Phone number",
+  "reve_contact_form_category": "Subject",
+  "reve_contact_form_category_option1": "Management",
+  "reve_contact_form_category_option2": "Website production",
+  "reve_contact_form_category_option3": "Other",
+  "reve_contact_form_content": "Enquiry details",
+  "reve_contact_dialog_title": "Mail transmission complete",
+  "reve_contact_dialog_content": "<p>Thank you for your enquiry.</p><p>Your enquiry has been received.</p><p>Please wait for a representative to contact you.</p>",
+  "reve_contact_dialog_button_text": "Return to top"
 }

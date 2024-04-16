@@ -6,6 +6,7 @@ export const LogoReve = () => {
     <Link href={'/'}>
       <Image
         src={'/svgs/reve/logo-reve.svg'}
+        priority={true}
         height={72}
         width={180}
         alt="logo"
