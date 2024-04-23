@@ -7,13 +7,13 @@ export const Business = ({ dict }: { dict: { [key: string]: string } }) => {
   const d = dict;
   return (
     <section className="body-font text-gray-600">
-      <div className="container mx-auto px-5 pt-24 pb-10">
+      <div className="container mx-auto px-5 pb-10 pt-24">
         <div className="mb-20 flex w-full flex-wrap justify-center">
           <div className="mb-6 w-full lg:mb-0 lg:w-1/2">
-            <h1 className="title-font mb-2 text-2xl font-semibold text-gray-900 sm:text-3xl">
+            <h1 className="title-font mb-2 text-2xl font-semibold md:pl-8 text-gray-900 sm:text-3xl">
               {d.rabbit_top_business_title}
             </h1>
-            <div className="h-1 w-20 rounded bg-rose-700"></div>
+            <div className="h-1 w-20 rounded bg-rose-700 md:ml-8"></div>
           </div>
           <p className="w-full px-4 leading-relaxed text-slate-700 lg:w-1/2">
             {d.rabbit_top_business_description_1}
@@ -77,7 +77,7 @@ export const Business = ({ dict }: { dict: { [key: string]: string } }) => {
                   {d.rabbit_top_business_norika_sub_title}
                 </span>
                 <Button
-                  className="mt-10 bg-rose-500 text-white md:hidden active:bg-rose-400 hover:bg-rose-400"
+                  className="mt-10 bg-rose-500 text-white hover:bg-rose-400 active:bg-rose-400 md:hidden"
                   variant={'default'}
                 >
                   {d.rabbit_top_business_button_text}
