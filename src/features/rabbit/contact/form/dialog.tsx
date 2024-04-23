@@ -35,7 +35,7 @@ export const Dialog = ({
           {/* ボタン */}
           <div className="flex w-full justify-center p-4">
             <Button
-              className="w-full bg-[#492332] tracking-wider"
+              className="w-full bg-[#492332] tracking-wider active:bg-[#492332] hover:bg-[#492332] focus:bg-[#492332] text-white"
               type="button"
               onClick={handleClick}
             >
