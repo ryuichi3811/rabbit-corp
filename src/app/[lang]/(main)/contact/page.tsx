@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
-import * as C from '@/features/reve/contact';
-import { Locale, fetchDict, mReveContact, setMetadata } from '@/utils';
+import * as C from '@/features/rabbit/contact';
+import { Locale, fetchDict, mRabbitContact, setMetadata } from '@/utils';
 
-export const metadata: Metadata = setMetadata('Reve Contact', mReveContact);
+export const metadata: Metadata = setMetadata('問い合わせ', mRabbitContact);
 
 const Page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   const d = await fetchDict(lang);

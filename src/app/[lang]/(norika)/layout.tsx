@@ -1,7 +1,7 @@
 'use server';
 import { ReactNode, Suspense } from 'react';
-import { robotoMono } from '@/styles/fonts';
-import { Footer, Header } from '@/ui/layouts/reve';
+import { notoSerifJp } from '@/styles/fonts/noto-serif-jp';
+import { Footer, Header } from '@/ui/layouts/norika';
 import { Locale } from '@/utils';
 // import { ParticleBackground } from '@/utils/particles';
 // import { optionsStars, particlesOption } from '@/utils/particles/option';
@@ -20,12 +20,10 @@ const Layout = async ({
       <body>
         {/* wraper */}
         <div className="w-full">
-          <div className={`${robotoMono.className} bg-reve-main`}>
+          <div className={`${notoSerifJp.className} bg-rose-50`}>
             <Suspense fallback={<div>Loading...</div>}>
               {/* <ParticleBackground option={option}> */}
-              <div className="pt-4">
-                <Header />
-              </div>
+              <Header />
               <div className={`min-h-[calc(100vh-96px-320px)] w-full`}>
                 {children}
               </div>

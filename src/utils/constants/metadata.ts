@@ -6,3 +6,12 @@ export const mReveNews =
 
 export const mReveContact =
   'Reveのお問い合わせページでは、ご質問やお問い合わせを承っております。お気軽にお問い合わせください。';
+
+export const mNorikaNews =
+  '徳薫のお知らせコンテンツでは、最新のニュースを提供しています。';
+
+export const mNorikaContact =
+  '徳薫のお問い合わせページでは、ご質問やお問い合わせを承っております。お気軽にお問い合わせください。';
+
+export const mRabbitContact =
+  '株式会社ラビットのお問い合わせページでは、ご質問やお問い合わせを承っております。お気軽にお問い合わせください。';

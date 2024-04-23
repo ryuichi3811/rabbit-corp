@@ -56,6 +56,7 @@ const config = {
       },
       colors: {
         clearness: 'rgba(0, 0, 0, 0)',
+        'norika-color': '#928484',
         'reve-color': '#e4d8bb',
         'reve-main': '#FFFDEF',
         'reve-sub': '#1c202a',

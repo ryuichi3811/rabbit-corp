@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import * as C from '@/features/reve/news';
-import { fetchNewsCntList, qReve } from '@/providers';
+import * as C from '@/features/norika/news';
+import { fetchNewsCntList, qNorika } from '@/providers';
 import { PaginationLayout } from '@/ui/layouts';
-import { Locale, fetchDict, mReveNews, pmReve, setMetadata } from '@/utils';
+import { Locale, fetchDict, mNorikaNews, pmReve, setMetadata } from '@/utils';
 
-export const metadata: Metadata = setMetadata('Reve News', mReveNews);
+export const metadata: Metadata = setMetadata('徳薫 News', mNorikaNews);
 
 const Page = async ({
   params: { lang, page },
@@ -18,7 +18,7 @@ const Page = async ({
   // クエリの設定
   const query = {
     limit: 10,
-    filters: qReve,
+    filters: qNorika,
     offset: page == 0 ? 0 : (page - 1) * perPage,
   };
   // お知らせコンテンツの取得

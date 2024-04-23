@@ -1,12 +1,15 @@
-import { Locale, fetchDict } from '@/utils';
+import { Metadata } from 'next';
+import * as c from '@/features/rabbit/top';
+import { Locale, fetchDict, setMetadata } from '@/utils';
+
+export const metadata: Metadata = setMetadata();
 
 const Home = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   const d = await fetchDict(lang);
   return (
     <main>
-      <h1>Welcome to my website</h1>
-      <p>Current language: {lang}</p>
-      <p>{d.name}</p>
+      <c.Hero dict={d} />
+      <c.Business dict={d} />
     </main>
   );
 };

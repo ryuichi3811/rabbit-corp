@@ -1,7 +1,7 @@
 import { match as matchLocale } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 import { NextResponse } from 'next/server';
-import { pmReve } from './utils';
+import { pmNorika, pmReve } from './utils';
 import type { NextRequest } from 'next/server';
 import { i18n } from '@/utils/i18n';
 
@@ -74,10 +74,6 @@ export async function middleware(request: NextRequest) {
   }
 
   switch (pathname) {
-    case `/ja`:
-      return redirect(pmReve('ja', ''));
-    case `/en`:
-      return redirect(pmReve('en', ''));
     case `/ja/reve/about`:
       return redirect(pmReve('ja', '/about/management'));
     case `/en/reve/about`:
@@ -86,6 +82,10 @@ export async function middleware(request: NextRequest) {
       return redirect(pmReve('ja', '/news/1'));
     case `/en/reve/news`:
       return redirect(pmReve('en', '/news/1'));
+    case `/ja/norika/news`:
+      return redirect(pmNorika('ja', '/news/1'));
+    case `/en/norika/news`:
+      return redirect(pmNorika('en', '/news/1'));
   }
 
   // ニュースコンテンツのURL転送

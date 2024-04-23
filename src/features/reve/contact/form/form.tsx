@@ -107,7 +107,7 @@ export const Form = ({ dict }: { dict: { [key: string]: string } }) => {
 
           {/* ------------------------------------------------------------- */}
           {/* 言語 */}
-          <input type="text" name="local" defaultValue={d.lang} hidden />
+          <input type="text" name="locale" defaultValue={d.lang} hidden />
 
           {/* ------------------------------------------------------------- */}
           {/* 組織 */}

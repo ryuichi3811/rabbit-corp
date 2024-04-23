@@ -1,5 +1,8 @@
 /* eslint-disable no-undef */
 // XSS対策
+
+import { isValid } from 'date-fns';
+
 // 不要な特殊文字やHTMLタグを置換する
 export const sanitizeInput = (input: string): string => {
   return input.replace(/[&<>"'/\\]/g, function (match) {
@@ -42,6 +45,37 @@ export const checkBlank = (
       return 'null';
     default:
       return 'Invalid language';
+  }
+};
+
+// 日付形式チェック
+export const checkDate = (
+  input: FormDataEntryValue | null,
+  local: FormDataEntryValue | null,
+) => {
+  const regex = /^\d{4}-\d{2}-\d{2}$/; // "yyyy-MM-dd" 形式の日付
+
+  const blank_message_ja = '必須項目が未入力です。';
+  const blank_message_en = 'Required fields have not been filled in.';
+  const message_ja = '有効な日付を入力してください。';
+  const message_en = 'Please enter a valid date.';
+
+  const validation = (message: string, blank_message: string) => {
+    if (input) {
+      const date = input.toString();
+      if (!regex.test(date) || !isValid(new Date(date))) return message;
+    } else {
+      return blank_message;
+    }
+  };
+
+  switch (local) {
+    case 'ja':
+      return validation(message_ja, blank_message_ja);
+    case 'en':
+      return validation(message_en, blank_message_en);
+    default:
+      return 'null';
   }
 };
 
@@ -117,6 +151,28 @@ export const name = (
   return error;
 };
 
+// バリデーションチェック - 誕生日 -
+export const birthday = (
+  input: FormDataEntryValue | null,
+  local: FormDataEntryValue | null,
+) => {
+  // バリデーション結果格納
+  const error = checkDate(input, local);
+
+  return error;
+};
+
+// バリデーションチェック - 性別 -
+export const gender = (
+  input: FormDataEntryValue | null,
+  local: FormDataEntryValue | null,
+) => {
+  // バリデーション結果格納
+  const error = checkBlank(input, local);
+
+  return error;
+};
+
 // バリデーションチェック - 会社名 -
 export const companyName = (
   input: FormDataEntryValue | null,
@@ -157,6 +213,17 @@ export const category = (
 ) => {
   // バリデーション結果格納
   const error = checkBlank(input, local);
+
+  return error;
+};
+
+// バリデーションチェック - 希望日 -
+export const desired_date = (
+  input: FormDataEntryValue | null,
+  local: FormDataEntryValue | null,
+) => {
+  // バリデーション結果格納
+  const error = checkDate(input, local);
 
   return error;
 };

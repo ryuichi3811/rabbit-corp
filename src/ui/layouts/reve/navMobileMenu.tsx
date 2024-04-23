@@ -1,19 +1,31 @@
 'use client';
+import { EnvelopeClosedIcon } from '@radix-ui/react-icons';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { reveNav } from '../../../utils';
+import { pmReve, reveNav } from '../../../utils';
 import { Button } from '../../button';
 import { HamburgerButton } from '@/ui';
+import LocaleSwitcher from '@/ui/locale-switcher';
 
 export const NavMobileMenu = () => {
   const [isOpened, setIsOpened] = useState(false);
   const handleClick = () => {
     setIsOpened(!isOpened);
   };
+  const lang = usePathname().substring(1).split('/').shift();
   return (
     <div className="relative">
+      <div className="fixed right-20 top-9 z-50 lg:hidden">
+        <Link
+          className="flex h-10 w-10 items-center justify-center rounded-xl bg-reve-color text-xl tracking-widest text-white hover:bg-reve-color/80 focus:bg-reve-color/80 focus:ring-2 focus:ring-opacity-50 focus:ring-offset-2 active:bg-reve-color/80"
+          href={pmReve(lang!, '/contact')}
+        >
+          <EnvelopeClosedIcon className="h-6 w-6 text-reve-sub" />
+        </Link>
+      </div>
       <HamburgerButton
         onClick={handleClick}
         color="default"
@@ -36,6 +48,9 @@ export const NavMobileMenu = () => {
         </Link>
         {/* コンテンツ */}
         <div className="h-full w-full px-10 pb-10 pt-40">
+          <div className="flex justify-end">
+            <LocaleSwitcher lang={lang!} />
+          </div>
           <nav>
             <ul>
               {reveNav.map((n) => (

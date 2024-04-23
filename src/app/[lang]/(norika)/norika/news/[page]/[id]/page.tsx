@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import * as C from '@/features/reve/news/detail';
+import * as C from '@/features/norika/news/detail';
 import { FailureNews, News, fetchNewsCnt } from '@/providers';
-import { Locale, fetchDict, mReveNews, setMetadata } from '@/utils';
+import { Locale, fetchDict, mNorikaNews, setMetadata } from '@/utils';
 
-export const metadata: Metadata = setMetadata('Reve News', mReveNews);
+export const metadata: Metadata = setMetadata('徳薫 News', mNorikaNews);
 
 const Page = async ({
   params: { lang, page, id },
