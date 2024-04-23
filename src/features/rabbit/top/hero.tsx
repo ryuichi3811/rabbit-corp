@@ -7,7 +7,7 @@ export const Hero = ({ dict }: { dict: { [key: string]: string } }) => {
   return (
     <div className="mt-2 bg-white pb-6 sm:pb-8 lg:pb-12">
       <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-        <section className="relative flex min-h-96 flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 py-16 shadow-lg md:py-20 xl:py-48">
+        <section className="relative flex min-h-[530px] flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 py-16 shadow-lg md:py-20 xl:py-48">
           {/* image - start */}
           <Image
             src="/images/rabbit/rabbit-header.webp"

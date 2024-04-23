@@ -1,3 +1,4 @@
+import { Button } from '@/ui';
 import { pmNorika, pmReve } from '@/utils';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,7 +7,7 @@ export const Business = ({ dict }: { dict: { [key: string]: string } }) => {
   const d = dict;
   return (
     <section className="body-font text-gray-600">
-      <div className="container mx-auto px-5 py-24">
+      <div className="container mx-auto px-5 pt-24 pb-10">
         <div className="mb-20 flex w-full flex-wrap justify-center">
           <div className="mb-6 w-full lg:mb-0 lg:w-1/2">
             <h1 className="title-font mb-2 text-2xl font-semibold text-gray-900 sm:text-3xl">
@@ -38,13 +39,19 @@ export const Business = ({ dict }: { dict: { [key: string]: string } }) => {
                 className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
               />
 
-              <div className="relative flex h-48 w-full flex-col rounded-lg border-y-4 border-yellow-400 bg-white/20 p-4 text-center backdrop-blur-sm md:h-auto md:bg-white">
+              <div className="relative flex h-48 w-full flex-col rounded-lg border-y-4 border-yellow-400 bg-white/60 p-4 text-center backdrop-blur-sm md:h-auto md:bg-white">
                 <span className="text-xl font-bold text-slate-700 lg:text-xl">
                   {d.rabbit_top_business_reve_title}
                 </span>
                 <span className="text-sm font-semibold text-yellow-700">
                   {d.rabbit_top_business_reve_sub_title}
                 </span>
+                <Button
+                  className="mt-10 text-reve-color md:hidden"
+                  variant={'default'}
+                >
+                  {d.rabbit_top_business_button_text}
+                </Button>
               </div>
             </Link>
             {/* ContentCard end */}
@@ -62,13 +69,19 @@ export const Business = ({ dict }: { dict: { [key: string]: string } }) => {
                 className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
               />
 
-              <div className="relative flex h-48 w-full flex-col rounded-lg border-y-4 border-rose-300 bg-white/40 p-4 text-center backdrop-blur-sm md:h-auto md:bg-white">
+              <div className="relative flex h-48 w-full flex-col rounded-lg border-y-4 border-rose-300 bg-white/60 p-4 text-center backdrop-blur-sm md:h-auto md:bg-white">
                 <span className="text-xl font-bold text-slate-700 lg:text-xl">
                   {d.rabbit_top_business_norika_title}
                 </span>
                 <span className="text-sm font-semibold text-rose-700">
                   {d.rabbit_top_business_norika_sub_title}
                 </span>
+                <Button
+                  className="mt-10 bg-rose-500 text-white md:hidden active:bg-rose-400 hover:bg-rose-400"
+                  variant={'default'}
+                >
+                  {d.rabbit_top_business_button_text}
+                </Button>
               </div>
             </Link>
             {/* ContentCard end */}
