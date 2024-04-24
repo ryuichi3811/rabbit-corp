@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { pm } from '@/utils';
+import { ArrowRightIcon } from '@radix-ui/react-icons';
 
 export const Hero = ({ dict }: { dict: { [key: string]: string } }) => {
   const d = dict;
@@ -32,20 +33,20 @@ export const Hero = ({ dict }: { dict: { [key: string]: string } }) => {
               {d.rabbit_top_hero_title}
             </h1>
 
-            <div className="flex w-full flex-col gap-2.5 tracking-wider sm:flex-row sm:justify-center">
+            <div className="w-full tracking-wider flex justify-center">
               <Link
-                href={pm(d.lang, '/business')}
-                className="inline-block rounded-lg bg-pink-700 px-8 py-3 text-center text-sm text-white outline-none ring-pink-900 transition duration-100 hover:bg-pink-600 focus-visible:ring active:bg-pink-600 md:text-base"
+                href={pm(d.lang, '/about')}
+                className="inline-flex justify-between rounded-lg w-40 items-center bg-pink-700 px-8 py-3 text-center text-sm text-white outline-none ring-pink-900 transition duration-100 hover:bg-pink-600 focus-visible:ring active:bg-pink-600 md:text-base"
               >
-                {d.rabbit_top_hero_button_text_se}
+                {d.rabbit_top_hero_button_text} <ArrowRightIcon className='h-6 w-6' />
               </Link>
 
-              <Link
+              {/* <Link
                 href={pm(d.lang, '/about')}
                 className="inline-block rounded-lg bg-white px-8 py-3 text-center text-sm text-gray-700 outline-none ring-pink-900 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base"
               >
                 {d.rabbit_top_hero_button_text}
-              </Link>
+              </Link> */}
             </div>
           </div>
           {/* text end */}
