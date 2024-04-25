@@ -1,12 +1,12 @@
 export const rabbitNav = [
   { href: '/', label: 'rabbit', name: 'Top', sub: 'トップ' },
   { href: '/about', label: 'about', name: 'About', sub: '会社情報' },
-  {
-    href: '/business',
-    label: 'business',
-    name: 'Business',
-    sub: '事業案内',
-  },
+  // {
+  //   href: '/business',
+  //   label: 'business',
+  //   name: 'Business',
+  //   sub: '事業案内',
+  // },
   {
     href: '/contact',
     label: 'contact',

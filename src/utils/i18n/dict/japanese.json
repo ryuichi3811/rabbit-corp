@@ -48,7 +48,7 @@
   "date_picker_text" : "日付を選択してください。",
   "rabbit_top_hero_title": "Inspiring people to dream and move",
   "rabbit_top_hero_subtitle": "「人々に心を揺さぶる夢を。」",
-  "rabbit_top_hero_button_text": "私たちについて",
+  "rabbit_top_hero_button_text": "会社情報",
   "rabbit_top_hero_button_text_se": "事業展開",
   "rabbit_top_business_title": "事業展開",
   "rabbit_top_business_description_1": "株式会社ラビットは、Reveと徳薫の事業を展開しています。",
@@ -84,5 +84,16 @@
   "rabbit_about_info_headline_3": "代表者名",
   "rabbit_about_info_text_3": "谷村 惠美",
   "rabbit_about_info_headline_4": "設立年月日",
-  "rabbit_about_info_text_4": "2016年04月13日"
+  "rabbit_about_info_text_4": "2016年04月13日",
+  "norika_access_header_title": "Access",
+  "norika_access_header_subtitle": "アクセス",
+  "norika_access_nagoya_title": "名古屋",
+  "norika_access_nagoya_address_line_1": "名古屋駅より地下鉄鶴舞線「いりなか駅」まで約２５分",
+  "norika_access_nagoya_address_line_2": "地下鉄鶴舞線「いりなか駅 １番出口」より徒歩で約３分",
+  "norika_access_tokyo_title": "東京",
+  "norika_access_tokyo_address_line_1": "東京駅より東京メトロ千代田線「表参道駅」まで約１５分",
+  "norika_access_tokyo_address_line_2": "東京メトロ千代田線「表参道駅 A5 出入口」より徒歩で約１２分",
+  "norika_access_address_title": "アクセス方法",
+  "norika_access_phone_title": "電話番号",
+  "norika_access_phone_body": "052-838-5007"
 }
