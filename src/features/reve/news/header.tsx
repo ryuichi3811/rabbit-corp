@@ -1,6 +1,14 @@
+import { ParticleBackground } from "@/utils/particles";
+import { particlesOption } from "@/utils/particles/option";
+
 export const Header = () => {
+  
+  const option = particlesOption;
   return (
-    <div className="my-4 bg-emerald-400 py-6 sm:py-14 lg:py-20">
+
+    <ParticleBackground option={option}>
+
+    <div className="my-4 py-6 sm:py-14 lg:py-20">
       <div className="mx-auto max-w-screen-xl px-4 md:px-8">
         <p className="mb-2 font-semibold text-indigo-500 md:mb-3 md:text-lg">
           Introducing
@@ -12,5 +20,6 @@ export const Header = () => {
         <p className="text-sm md:text-lg lg:text-xl">お知らせ</p>
       </div>
     </div>
+    </ParticleBackground>
   );
 };

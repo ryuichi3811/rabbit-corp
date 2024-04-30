@@ -1,47 +1,15 @@
 import { ISourceOptions } from '@tsparticles/engine';
 
 export const particlesOption: ISourceOptions = {
-  background: {
-    size: 'cover',
-    opacity: 0,
-  },
-  fullScreen: {
-    enable: false,
-    zIndex: 0,
-  },
-  fpsLimit: 120,
-  interactivity: {
-    events: {
-      onClick: {
-        enable: false,
-        mode: '',
-      },
-      onHover: {
-        enable: false,
-        mode: '',
-      },
-    },
-    modes: {
-      push: {
-        quantity: 0,
-      },
-      repulse: {
-        distance: 0,
-        duration: 0,
-      },
-    },
-  },
-  preset: 'links',
+  // background: {
+  //   color: '#000',
+  // },
   particles: {
     color: {
-      value: '#000',
+      value: ["#3998D0", "#2EB6AF", "#A9BD33", "#FEC73B", "#F89930", "#F45623", "#D62E32", "#EB586E", "#9952CF"],
     },
-    links: {
-      color: '#000',
-      distance: 150,
-      enable: true,
-      opacity: 0.5,
-      width: 1,
+    number: {
+      value: 200,
     },
     move: {
       direction: 'none',
@@ -49,31 +17,27 @@ export const particlesOption: ISourceOptions = {
       outModes: {
         default: 'out',
       },
-      random: false,
-      speed: 6,
+      random: true,
+      speed: 0.5,
       straight: false,
     },
-    number: {
-      density: {
-        enable: true,
-      },
-      value: 100,
-    },
     opacity: {
-      value: 0.5,
-    },
-    shape: {
-      type: 'circle',
+      animation: {
+        enable: true,
+        speed: 1,
+        sync: false,
+      },
+      value: { min: 0, max: 1 },
     },
     size: {
       value: { min: 1, max: 5 },
     },
   },
-  detectRetina: true,
 };
 
 const optionInit = () => {
   const o = particlesOption;
+  o.preset = '';
   o.particles = {};
   o.particles.shape = {};
 };
@@ -82,7 +46,8 @@ const optionInit = () => {
 export const optionsStars = () => {
   const o = particlesOption;
   optionInit();
-  // o.preset = 'stars';
+  o.preset = 'stars';
   o.particles!.shape!.type = 'square';
+
   return o;
 };

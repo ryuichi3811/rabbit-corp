@@ -23,14 +23,14 @@ export const Header = ({
       <div className="my-8">
         <AspectRatio ratio={8 / 5}>
           <Image
-            // src={cnt.head_image.url}
-            src={
-              'https://images.microcms-assets.io/assets/9a0fcdad42894b26bb37bc2a647c48b5/dd07c76d76314295aefe57b7c6a07439/reve-default-header-image.png'
-            }
+            src={cnt.head_image.url}
+            // src={
+            //   'https://images.microcms-assets.io/assets/9a0fcdad42894b26bb37bc2a647c48b5/dd07c76d76314295aefe57b7c6a07439/reve-default-header-image.png'
+            // }
             width={cnt.head_image.width}
             height={cnt.head_image.height}
             alt={`${cnt.title_ja} ヘッダー画像`}
-            className="rounded-xl"
+            className="rounded-md"
           />
         </AspectRatio>
       </div>
@@ -44,7 +44,7 @@ export const Header = ({
       </div>
 
       {/* タイトル */}
-      <div className="my-12">
+      <div className="mt-12 pb-12">
         <h2 className="text-xl font-bold drop-shadow-[0px_1px_2px_rgba(120,100,0,.6)] sm:pl-4">
           {cnt && (lang === 'en' ? cnt.title_en : cnt.title_ja)}
         </h2>

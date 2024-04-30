@@ -1,9 +1,9 @@
 export const Header = () => {
   return (
     <>
-      <div className="my-4 bg-emerald-400 py-6 sm:py-8 lg:py-10">
+      <div className="my-4 py-6 sm:py-8 lg:py-10">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-          <div className="rounded-lg bg-reve-main/70 px-4 py-6 md:py-8 lg:py-12">
+          <div className="rounded-lg px-4 py-6 md:py-8 lg:py-12">
             <p className="mb-2 text-center font-semibold text-indigo-500 md:mb-3 lg:text-lg">
               Introducing
             </p>

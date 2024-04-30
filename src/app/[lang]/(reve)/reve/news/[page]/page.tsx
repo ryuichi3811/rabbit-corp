@@ -34,12 +34,15 @@ const Page = async ({
 
   return (
     <main>
-      <C.Header />
-      <C.Overview dict={d} contents={nc.contents} />
-      <PaginationLayout
-        totalCount={nc.totalCount}
-        link={pmReve(lang, '/news/1')}
-      />
+        <C.Header />
+        <div className="backdrop-blur-md">
+
+        <C.Overview dict={d} contents={nc.contents} />
+        <PaginationLayout
+          totalCount={nc.totalCount}
+          link={pmReve(lang, '/news/1')}
+          />
+          </div>
     </main>
   );
 };

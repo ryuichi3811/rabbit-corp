@@ -43,7 +43,7 @@ export const NewsItemVertical = ({
         </AspectRatio>
       </Link>
 
-      <div className="px-2 md:mt-3 md:px-0">
+      <div className="px-2 md:mt-3 md:px-0 backdrop-blur-md">
         {/* カテゴリー モバイル時のみ表示 */}
         <div className="flex w-full items-baseline justify-between md:hidden">
           <p className="text-xs text-gray-500">

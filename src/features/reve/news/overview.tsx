@@ -13,7 +13,7 @@ export const Overview = async ({
 
   return (
     <>
-      <div className="grid justify-items-center gap-8 px-4 sm:gap-12 xl:gap-16">
+      <div className="relative pt-12 backdrop-blur-md grid justify-items-center gap-8 px-4 sm:gap-12 xl:gap-16">
         {contents.map((c: News) => (
           <NewsItemHorizontal
             dict={d}

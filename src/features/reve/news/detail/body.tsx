@@ -18,7 +18,7 @@ export const Body = ({
   return (
     <>
       {/* コンテンツ本文 */}
-      <RichEditorLayout className="mt-4">
+      <RichEditorLayout className="pt-4 backdrop-blur-md">
         <div className="px-4">
           {d.lang === 'en' ? parse(cnt.body_en) : parse(cnt.body_ja)}
         </div>

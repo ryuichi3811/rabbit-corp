@@ -17,7 +17,6 @@ export const LatestNews = async ({
   const { contents } = await fetchNewsCntList(query);
 
   return (
-    // <div className="bg-gradient-to-tr from-reve-main to-reve-sub">
     <div className="text-slate-700">
       <section className="flex w-full flex-col items-center p-4">
         {/* セクション見出し */}

@@ -14,7 +14,7 @@ export const Form = ({ dict }: { dict: { [key: string]: string } }) => {
   const [state, dispatch] = useFormState(mailAction, initialState);
   return (
     <>
-      <div className="mb-20 mt-16 flex flex-col items-center">
+      <div className="pb-20 pt-16 flex flex-col items-center">
         <form
           action={dispatch}
           ref={ref}

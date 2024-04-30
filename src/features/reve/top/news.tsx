@@ -16,14 +16,13 @@ export const LatestNews = async ({
   // お知らせコンテンツの取得
   const { contents } = await fetchNewsCntList(query);
 
-  const contentsSample: News[] = [];
-  contentsSample.push(contents[0]);
-  contentsSample.push(contents[0]);
-  contentsSample.push(contents[0]);
+  // const contentsSample: News[] = [];
+  // contentsSample.push(contents[0]);
+  // contentsSample.push(contents[0]);
+  // contentsSample.push(contents[0]);
 
   return (
-    // <div className="bg-gradient-to-tr from-reve-main to-reve-sub">
-    <div className="">
+    <div className="relative z-30">
       <section className="flex w-full flex-col items-center p-4">
         {/* セクション見出し */}
         <div className="mt-20">
@@ -38,7 +37,7 @@ export const LatestNews = async ({
         </div>
         {/* News コンテンツ */}
         <div className="mt-8 flex w-full flex-wrap justify-center gap-4 overflow-auto align-baseline md:flex-wrap md:gap-10 xl:gap-16">
-          {contentsSample.map((c: News) => (
+          {contents.map((c: News) => (
             <NewsItemVertical
               dict={d}
               content={c}
