@@ -29,7 +29,7 @@ export const NavScreenMenu = ({ path }: { path?: string }) => {
           <li
             key={n.label}
             className={clsx(
-              'mx-4 text-center text-amber-100 duration-300',
+              'mx-4 text-center text-amber-100 duration-300 hover:text-amber-200 cursor-pointer',
               cPath() === n.label && 'text-reve-main',
             )}
           >

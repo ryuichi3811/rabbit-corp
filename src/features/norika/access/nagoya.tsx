@@ -4,6 +4,10 @@ import Link from 'next/link';
 export const Nagoya = ({ dict }: { dict: { [key: string]: string } }) => {
   const d = dict;
   return (
+    <>
+    <div className="w-full h-auto">
+      <Image src={'/svgs/norika/border/2.svg'} alt="" width={1800} height={300} />
+    </div>
     <section className="relative text-slate-700 my-8">
       <div className="mt-4 flex justify-center items-center">
         <h2 className="text-center text-3xl w-1/2 font-bold md:text-4xl py-3 px-8 rounded-3xl bg-rose-100 border-b-2 border-rose-300">
@@ -18,7 +22,7 @@ export const Nagoya = ({ dict }: { dict: { [key: string]: string } }) => {
             allowFullScreen={true}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+            ></iframe>
         </div>
         <div className="mt-8 flex min-h-96 w-full flex-col justify-center bg-white py-4 md:ml-auto md:mt-0 md:w-1/2 md:py-8 lg:w-1/3 [&_p]:tracking-wider">
           <div className="px-6">
@@ -40,11 +44,11 @@ export const Nagoya = ({ dict }: { dict: { [key: string]: string } }) => {
                 alt="telIcon"
                 width={24}
                 height={24}
-              />
+                />
               <Link
                 href={'tel:052-838-5007'}
                 className="border-b border-rose-300 text-rose-500"
-              >
+                >
                 {d.norika_access_phone_body}
               </Link>
             </p>
@@ -52,5 +56,6 @@ export const Nagoya = ({ dict }: { dict: { [key: string]: string } }) => {
         </div>
       </div>
     </section>
+                </>
   );
 };

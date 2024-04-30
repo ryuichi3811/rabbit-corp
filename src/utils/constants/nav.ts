@@ -29,7 +29,7 @@ export const reveNav = [
 
 export const norikaNav = [
   { href: '/norika', label: 'norika', name: 'Top', sub: 'トップ' },
-  { href: '/norika/about', label: 'about', name: 'About', sub: 'サービス内容' },
+  { href: '/norika/about', label: 'about', name: 'Service', sub: 'サービス内容' },
   { href: '/norika/news/1', label: 'news', name: 'News', sub: 'ニュース' },
   { href: '/norika/access', label: 'access', name: 'Accsee', sub: 'アクセス' },
   {

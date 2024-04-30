@@ -1,10 +1,10 @@
 export const Header = () => {
   return (
     <>
-      <div className="my-4 bg-emerald-400 py-6 sm:py-8 lg:py-10">
-        <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-          <div className="rounded-lg bg-reve-main/70 px-4 py-6 md:py-8 lg:py-12">
-            <p className="mb-2 text-center font-semibold text-indigo-500 md:mb-3 lg:text-lg">
+      <div className="bg-[url('/svgs/norika/header/contacts.svg')] relative h-[13rem] md:h-[26rem] bg-center bg-cover py-6 sm:py-8 lg:py-24 mt-24 max-w-screen-xl mx-auto flex justify-center">
+        <div className="px-4 md:px-8 absolute -top-20">
+          <div className="rounded-lg p-4">
+            <p className="mb-2 text-center font-semibold text-rose-500 md:mb-3 lg:text-lg">
               Introducing
             </p>
 

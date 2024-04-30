@@ -2,12 +2,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { News } from '@/providers';
 import { AspectRatio } from '@/ui';
+import clsx from 'clsx';
 
 export const NewsItemVertical = ({
+  className,
   dict,
   content,
   link,
 }: {
+  className?: string;
   dict: { [key: string]: string };
   content: News;
   link: string;
@@ -55,10 +58,10 @@ export const NewsItemVertical = ({
           {d.lang === 'ja' ? c.title_ja : c.title_en}
         </h3>
         {/* 詳細を見る */}
-        <p className="h-4 text-end leading-4">
+        <p className="h-5 text-end leading-4">
           <Link
             href={link}
-            className="text-xs tracking-wide text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700 md:text-sm"
+            className={clsx("text-xs tracking-wide text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700 md:text-sm", className)}
           >
             {d.reve_component_newsItem_text}
           </Link>
