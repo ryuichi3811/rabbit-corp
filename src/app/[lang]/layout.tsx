@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { i18n } from '../utils/i18n/i18nConfig';
+import { Locale, i18n } from '../../utils/i18n/i18nConfig';
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
 import { setMetadata } from '@/utils';
@@ -11,6 +11,18 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
-  return <>{children}</>;
+export default function RootLayout({
+  children,
+  params: { lang },
+}: {
+  children: ReactNode;
+  params: { lang: Locale };
+}) {
+  return (
+    <>
+      <html lang={lang}>
+        <body>{children}</body>
+      </html>
+    </>
+  );
 }

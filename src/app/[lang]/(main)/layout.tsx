@@ -17,29 +17,24 @@ const Layout = async ({
   // const option = optionsStars();
   // const option = particlesOption;
   return (
-    <html lang={lang}>
-      <body>
-        {/* wraper */}
-        <div className="w-full">
-          <div className={`${roboto.className} bg-white`}>
-            <Suspense fallback={<div>Loading...</div>}>
-              {/* <ParticleBackground option={option}> */}
-              <div className="pt-4">
-                <Header />
-              </div>
-              <div
-                id="top"
-                className={`min-h-[calc(100vh-96px-320px)] w-full pt-24`}
-              >
-                {children}
-              </div>
-              {/* </ParticleBackground> */}
-            </Suspense>
-            <Footer dict={d} />
+    <div className="w-full">
+      <div className={`${roboto.className} bg-white`}>
+        <Suspense fallback={<div>Loading...</div>}>
+          {/* <ParticleBackground option={option}> */}
+          <div className="pt-4">
+            <Header />
           </div>
-        </div>
-      </body>
-    </html>
+          <div
+            id="top"
+            className={`min-h-[calc(100vh-96px-320px)] w-full pt-24`}
+          >
+            {children}
+          </div>
+          {/* </ParticleBackground> */}
+        </Suspense>
+        <Footer dict={d} />
+      </div>
+    </div>
   );
 };
 

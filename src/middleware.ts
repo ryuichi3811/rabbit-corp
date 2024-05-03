@@ -58,15 +58,6 @@ export async function middleware(request: NextRequest) {
   if (pathnameIsMissingLocale) {
     const pathname = request.nextUrl.pathname;
     const locale = fetchLocale(request);
-    // const excludePaths = ['/sitemap.xml', '/robots.txt'];
-    // // 除外パス
-    // const exclusion = (path: string) => {
-    //   if (pathname === path) {
-    //     return;
-    //   }
-    // };
-    // // 除外パスをチェック
-    // excludePaths.forEach(exclusion);
 
     return redirect(
       `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,

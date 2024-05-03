@@ -79,11 +79,11 @@ const sitemap_content = async (
 ): Promise<MetadataRoute.Sitemap> => {
   const urls: MetadataRoute.Sitemap = [];
   const nQuery = {
-    limit: 9999,
+    limit: 100,
     filters: qNorika,
   };
   const rQuery = {
-    limit: 9999,
+    limit: 100,
     filters: qReve,
   };
   // コンテンツ取得
@@ -114,11 +114,11 @@ const sitemap_news_page = async (
 ): Promise<MetadataRoute.Sitemap> => {
   // クエリの設定
   const nQuery = {
-    limit: 9999,
+    limit: 100,
     filters: qNorika,
   };
   const rQuery = {
-    limit: 9999,
+    limit: 100,
     filters: qReve,
   };
   // お知らせコンテンツの取得
@@ -132,10 +132,10 @@ const sitemap_news_page = async (
   const urls: MetadataRoute.Sitemap = [];
 
   for (let i = 0; i < nPage; i++) {
-    urls.push({ url: `${url}/${lang}/norika/news/${i}` });
+    urls.push({ url: `${url}/${lang}/norika/news/${i + 1}` });
   }
   for (let i = 0; i < rPage; i++) {
-    urls.push({ url: `${url}/${lang}/reve/news/${i}` });
+    urls.push({ url: `${url}/${lang}/reve/news/${i + 1}` });
   }
 
   return urls;
