@@ -14,7 +14,7 @@ export const Header = ({
     <>
       {/* ヘッダー */}
 
-      <div className="my-12">
+      <div id="top" className="my-12">
         <h1 className="text-4xl font-bold tracking-wider text-reve-sub md:text-5xl">
           News
         </h1>

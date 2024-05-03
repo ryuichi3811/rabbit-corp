@@ -44,7 +44,7 @@ export const Footer = ({ dict }: { dict: { [key: string]: string } }) => {
                 {reveNav.map((nav) => (
                   <div key={nav.label}>
                     <Link
-                      href={pm(d.lang, nav.href + '#top')}
+                      href={pm(d.lang, nav.href)}
                       className="text-white transition duration-100 hover:text-amber-200 active:text-amber-300"
                     >
                       {d.lang === 'ja' ? nav.sub : nav.name}

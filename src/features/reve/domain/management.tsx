@@ -7,7 +7,7 @@ export const TalentManagement = ({
 }) => {
   const d = dict;
   return (
-    <div id="top" className="relative z-10 mb-32 w-full">
+    <div className="relative z-10 mb-32 w-full">
       {/* Header start */}
       <div className="relative flex justify-center py-24">
         <h1 className="relative z-10 text-center text-3xl md:text-4xl xl:text-5xl">

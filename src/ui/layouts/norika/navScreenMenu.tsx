@@ -33,7 +33,7 @@ export const NavScreenMenu = ({ path }: { path?: string }) => {
               cPath() === n.label && 'text-reve-main',
             )}
           >
-            <Link href={pm(lang, n.href + '#top')}>
+            <Link href={pm(lang, n.href)}>
               <span className="text-lg">{n.sub}</span>
               <p className="text-sm tracking-wider">{n.name}</p>
             </Link>

@@ -33,7 +33,7 @@ export const NavScreenMenu = ({ path }: { path?: string }) => {
               cPath() === n.label && 'text-reve-main',
             )}
           >
-            <Link href={pm(lang, n.href + '#top')}>
+            <Link href={pm(lang, n.href)}>
               <p className="text-xl">{n.name}</p>
               <span className="hover:block hover:w-full hover:shadow-reve-hover-light"></span>
               <span className="text-xs">{n.sub}</span>

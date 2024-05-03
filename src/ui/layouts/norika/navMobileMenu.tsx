@@ -64,7 +64,7 @@ export const NavMobileMenu = () => {
                   key={n.label}
                   className="text-slate-700 duration-300 [&+li]:mt-4"
                 >
-                  <Link href={n.href + '#top'} onClick={handleClick}>
+                  <Link href={n.href} onClick={handleClick}>
                     {n.label === 'contact' ? (
                       <Button
                         variant={'default'}
