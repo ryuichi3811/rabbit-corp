@@ -110,22 +110,30 @@ export const ConpanyInfo = ({ dict }: { dict: { [key: string]: string } }) => {
           <h2 className="my-6 text-2xl font-bold lg:text-center lg:text-3xl">
             {d.rabbit_about_info_title}
           </h2>
-          <div className="w-full max-w-screen-md my-10">
+          <div className="my-10 w-full max-w-screen-md">
             <ul className="w-full">
               <li className="flex w-full justify-start border-b border-t border-pink-700 px-8 py-8">
-                <p className="min-w-28 md:w-48">{d.rabbit_about_info_headline_1}</p>
+                <p className="min-w-28 md:w-48">
+                  {d.rabbit_about_info_headline_1}
+                </p>
                 <p className="">{d.rabbit_about_info_text_1}</p>
               </li>
               <li className="flex w-full justify-start border-b border-pink-700 px-8 py-8">
-                <p className="min-w-28 md:w-48">{d.rabbit_about_info_headline_2}</p>
+                <p className="min-w-28 md:w-48">
+                  {d.rabbit_about_info_headline_2}
+                </p>
                 <p className="">{d.rabbit_about_info_text_2}</p>
               </li>
               <li className="flex w-full justify-start border-b border-pink-700 px-8 py-8">
-                <p className="min-w-28 md:w-48">{d.rabbit_about_info_headline_3}</p>
+                <p className="min-w-28 md:w-48">
+                  {d.rabbit_about_info_headline_3}
+                </p>
                 <p className="">{d.rabbit_about_info_text_3}</p>
               </li>
               <li className="flex w-full justify-start border-b border-pink-700 px-8 py-8">
-                <p className="min-w-28 md:w-48">{d.rabbit_about_info_headline_4}</p>
+                <p className="min-w-28 md:w-48">
+                  {d.rabbit_about_info_headline_4}
+                </p>
                 <p className="">{d.rabbit_about_info_text_4}</p>
               </li>
             </ul>

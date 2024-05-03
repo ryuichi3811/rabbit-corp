@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import { Locale, fetchDict, setMetadata } from '@/utils';
 import * as c from '@/features/norika/access';
+import { Locale, fetchDict, setMetadata } from '@/utils';
 
 export const metadata: Metadata = setMetadata('徳薫 - アクセス');
 

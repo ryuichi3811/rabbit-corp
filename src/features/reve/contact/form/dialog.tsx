@@ -23,7 +23,7 @@ export const Dialog = ({
       {/* 背景 */}
       <div className="fixed left-0 top-0 flex h-screen w-screen items-center justify-center bg-black bg-opacity-50">
         {/* ダイアログコンテンツ */}
-        <div className="w-3/4 rounded-lg relative z-50 border border-slate-400 bg-slate-100 sm:w-2/3">
+        <div className="relative z-50 w-3/4 rounded-lg border border-slate-400 bg-slate-100 sm:w-2/3">
           {/* ダイアログタイトル */}
           <div className="border-b border-slate-400 px-4 py-4 md:px-12">
             <h2 className="text-center">{d.reve_contact_dialog_title}</h2>

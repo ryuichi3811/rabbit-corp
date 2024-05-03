@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useRef } from 'react';
 import { useFormState } from 'react-dom';
 import { Dialog, SendButton } from '.';
@@ -14,7 +15,6 @@ import {
   Textarea,
 } from '@/ui';
 import * as S from '@/ui/select';
-import Link from 'next/link';
 import { pm } from '@/utils';
 
 export const Form = ({ dict }: { dict: { [key: string]: string } }) => {
@@ -63,15 +63,21 @@ export const Form = ({ dict }: { dict: { [key: string]: string } }) => {
           >
             <div className="flex items-center space-x-2">
               <RadioGroupItem value="男性" id="gender_1" />
-              <Label htmlFor="gender_1">{d.norika_contact_form_gender_male}</Label>
+              <Label htmlFor="gender_1">
+                {d.norika_contact_form_gender_male}
+              </Label>
             </div>
             <div className="flex items-center space-x-2">
               <RadioGroupItem value="女性" id="gender_2" />
-              <Label htmlFor="gender_2">{d.norika_contact_form_gender_female}</Label>
+              <Label htmlFor="gender_2">
+                {d.norika_contact_form_gender_female}
+              </Label>
             </div>
             <div className="flex items-center space-x-2">
               <RadioGroupItem value="その他" id="gender_3" />
-              <Label htmlFor="gender_3">{d.norika_contact_form_gender_other}</Label>
+              <Label htmlFor="gender_3">
+                {d.norika_contact_form_gender_other}
+              </Label>
             </div>
           </RadioGroup>
 

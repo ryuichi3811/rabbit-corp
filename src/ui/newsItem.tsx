@@ -1,8 +1,8 @@
+import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import { News } from '@/providers';
 import { AspectRatio } from '@/ui';
-import clsx from 'clsx';
 
 export const NewsItemVertical = ({
   className,
@@ -43,7 +43,7 @@ export const NewsItemVertical = ({
         </AspectRatio>
       </Link>
 
-      <div className="px-2 md:mt-3 md:px-0 backdrop-blur-md">
+      <div className="px-2 backdrop-blur-md md:mt-3 md:px-0">
         {/* カテゴリー モバイル時のみ表示 */}
         <div className="flex w-full items-baseline justify-between md:hidden">
           <p className="text-xs text-gray-500">
@@ -61,7 +61,10 @@ export const NewsItemVertical = ({
         <p className="h-5 text-end leading-4">
           <Link
             href={link}
-            className={clsx("text-xs tracking-wide text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700 md:text-sm", className)}
+            className={clsx(
+              'text-xs tracking-wide text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700 md:text-sm',
+              className,
+            )}
           >
             {d.reve_component_newsItem_text}
           </Link>

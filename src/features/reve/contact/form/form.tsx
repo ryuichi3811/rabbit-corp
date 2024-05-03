@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useRef } from 'react';
 import { useFormState } from 'react-dom';
 import { Dialog, SendButton } from '.';
@@ -7,7 +8,6 @@ import { mailAction } from '@/actions';
 import { initialState } from '@/providers/resend';
 import { Input, Label, Textarea } from '@/ui';
 import * as S from '@/ui/select';
-import Link from 'next/link';
 import { pm } from '@/utils';
 
 export const Form = ({ dict }: { dict: { [key: string]: string } }) => {
@@ -108,15 +108,15 @@ export const Form = ({ dict }: { dict: { [key: string]: string } }) => {
           />
 
           <div className="mb-5">
-            <input
-              type="checkbox"
-              id="privacyPolicy"
-              required
-            />
+            <input type="checkbox" id="privacyPolicy" required />
             <label htmlFor="privacyPolicy" className="ml-2">
               {d.lang === 'ja' ? (
                 <>
-                  <Link href={pm(d.lang, '/privacy-policy')} target="_blank" className='text-indigo-500 border-b border-indigo-500 hover:text-indigo-700 px-2'>
+                  <Link
+                    href={pm(d.lang, '/privacy-policy')}
+                    target="_blank"
+                    className="border-b border-indigo-500 px-2 text-indigo-500 hover:text-indigo-700"
+                  >
                     {d.form_privacy_policy_agreement_link}
                   </Link>
                   {d.form_privacy_policy_agreement}
@@ -124,7 +124,11 @@ export const Form = ({ dict }: { dict: { [key: string]: string } }) => {
               ) : (
                 <>
                   {d.form_privacy_policy_agreement}
-                  <Link href={pm(d.lang, '/privacy-policy')} target="_blank" className='text-indigo-500 border-b border-indigo-500 hover:text-indigo-700 px-2'>
+                  <Link
+                    href={pm(d.lang, '/privacy-policy')}
+                    target="_blank"
+                    className="border-b border-indigo-500 px-2 text-indigo-500 hover:text-indigo-700"
+                  >
                     {d.form_privacy_policy_agreement_link}
                   </Link>
                 </>

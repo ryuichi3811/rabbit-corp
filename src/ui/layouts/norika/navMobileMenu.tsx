@@ -22,7 +22,7 @@ export const NavMobileMenu = () => {
       <div className="fixed right-20 top-9 z-50 lg:hidden">
         <Link
           className="flex h-10 w-10 items-center justify-center rounded-xl bg-rose-500 text-xl tracking-widest text-white hover:bg-rose-400 focus:bg-rose-400 focus:ring-2 focus:ring-rose-400 focus:ring-opacity-50 focus:ring-offset-2 focus:ring-offset-rose-400 active:bg-rose-400"
-          href={pmNorika(lang!, '/contact')}
+          href={pmNorika(lang!, '/contact#top')}
         >
           <EnvelopeClosedIcon className="h-6 w-6 text-white" />
         </Link>
@@ -42,7 +42,7 @@ export const NavMobileMenu = () => {
         {/* ロゴ */}
         <Link
           className="absolute left-4 top-4"
-          href="/norika"
+          href="/norika#top"
           onClick={handleClick}
         >
           <Image
@@ -64,7 +64,7 @@ export const NavMobileMenu = () => {
                   key={n.label}
                   className="text-slate-700 duration-300 [&+li]:mt-4"
                 >
-                  <Link href={n.href} onClick={handleClick}>
+                  <Link href={n.href + '#top'} onClick={handleClick}>
                     {n.label === 'contact' ? (
                       <Button
                         variant={'default'}

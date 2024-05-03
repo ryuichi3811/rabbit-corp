@@ -25,7 +25,10 @@ const Layout = async ({
             <Suspense fallback={<div>Loading...</div>}>
               {/* <ParticleBackground option={option}> */}
               <Header />
-              <div className={`min-h-[calc(100vh-96px-320px)] w-full pt-24`}>
+              <div
+                id="top"
+                className={`min-h-[calc(100vh-96px-320px)] w-full pt-24`}
+              >
                 {children}
               </div>
               {/* </ParticleBackground> */}

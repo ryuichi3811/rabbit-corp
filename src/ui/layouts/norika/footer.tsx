@@ -1,10 +1,10 @@
 'use client';
-import { norikaNav, pm, pmNorika } from '@/utils';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { RabbitLogo } from '@/ui';
 import LocaleSwitcher from '@/ui/locale-switcher';
-import { usePathname } from 'next/navigation';
+import { norikaNav, pm, pmNorika } from '@/utils';
 
 export const Footer = ({ dict }: { dict: { [key: string]: string } }) => {
   const d = dict;
@@ -12,7 +12,7 @@ export const Footer = ({ dict }: { dict: { [key: string]: string } }) => {
   return (
     <>
       <footer className="bg-rose-300 pt-4 sm:pt-6 lg:pt-8">
-        <div className="pt-12 flex flex-col items-center">
+        <div className="flex flex-col items-center pt-12">
           <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
             <div className="mb-16 grid grid-cols-2 gap-12 md:grid-cols-4 lg:grid-cols-6 lg:gap-8">
               <div className="col-span-full lg:col-span-2">
@@ -43,7 +43,7 @@ export const Footer = ({ dict }: { dict: { [key: string]: string } }) => {
                 </div>
 
                 {/* locale switcher start */}
-                <div className="flex justify-start pl-1 md:pl-6 pt-3">
+                <div className="flex justify-start pl-1 pt-3 md:pl-6">
                   <LocaleSwitcher lang={lang!} />
                 </div>
                 {/* locale switcher end */}
@@ -59,7 +59,7 @@ export const Footer = ({ dict }: { dict: { [key: string]: string } }) => {
                   {norikaNav.map((nav) => (
                     <div key={nav.label}>
                       <Link
-                        href={pm(d.lang, nav.href)}
+                        href={pm(d.lang, nav.href + '#top')}
                         className="text-white transition duration-100 hover:text-rose-500 active:text-rose-600"
                       >
                         {d.lang === 'ja' ? nav.sub : nav.name}

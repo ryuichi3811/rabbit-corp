@@ -40,16 +40,16 @@ export const Header = ({ dict }: { dict: { [key: string]: string } }) => {
             />
           </div>
         </div>
-        <div className="flex w-full justify-center px-8 py-24 relative">
+        <div className="relative flex w-full justify-center px-8 py-24">
           <div className="w-full max-w-screen-lg">
-            <h2 className="text-2xl text-rose-300 md:text-4xl leading-[3rem] md:leading-[6rem]">
+            <h2 className="text-2xl leading-[3rem] text-rose-300 md:text-4xl md:leading-[6rem]">
               <span className="block">{d.norika_top_hero_subtitle_1}</span>
               <span className="block pl-4">{d.norika_top_hero_subtitle_2}</span>
             </h2>
           </div>
-          <div className="absolute top-0 right-8 md:right-[15%] md:h-80 md:w-80 h-28 w-28">
+          <div className="absolute right-8 top-0 h-28 w-28 md:right-[15%] md:h-80 md:w-80">
             <Image
-                className='[animation:_spin_30s_linear_infinite;]'
+              className="[animation:_spin_30s_linear_infinite;]"
               alt=""
               src={'/svgs/norika/top/top_circle.svg'}
               width={600}
@@ -58,12 +58,12 @@ export const Header = ({ dict }: { dict: { [key: string]: string } }) => {
           </div>
         </div>
         <div className="rotate-180">
-            <Image
-                alt=""
-                src={'/svgs/norika/top/border/1.svg'}
-                width={2000}
-                height={100}
-            />
+          <Image
+            alt=""
+            src={'/svgs/norika/top/border/1.svg'}
+            width={2000}
+            height={100}
+          />
         </div>
       </div>
     </>

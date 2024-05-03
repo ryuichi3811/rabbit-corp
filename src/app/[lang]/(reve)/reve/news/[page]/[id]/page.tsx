@@ -3,8 +3,8 @@ import { notFound } from 'next/navigation';
 import * as C from '@/features/reve/news/detail';
 import { FailureNews, News, fetchNewsCnt } from '@/providers';
 import { Locale, fetchDict, mReveNews, setMetadata } from '@/utils';
-import { particlesOption } from '@/utils/particles/option/fullScreen';
 import { ParticleBackground } from '@/utils/particles';
+import { particlesOption } from '@/utils/particles/option/fullScreen';
 
 export const metadata: Metadata = setMetadata('Reve News', mReveNews);
 

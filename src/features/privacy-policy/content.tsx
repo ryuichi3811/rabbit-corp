@@ -1,5 +1,5 @@
 export const Content = ({ dict }: { dict: { [key: string]: string } }) => {
-  const d = dict;
+  // const d = dict;
   return (
     <div className="mx-auto max-w-screen-lg [&_p]:text-sm">
       <div className="mt-12 flex w-full justify-center px-4 py-20">

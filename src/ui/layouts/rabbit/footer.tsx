@@ -1,9 +1,9 @@
 'use client';
-import { reveNav, pm, rabbitNav, norikaNav } from '@/utils';
 import Link from 'next/link';
-import { RabbitLogo } from '@/ui';
 import { usePathname } from 'next/navigation';
+import { RabbitLogo } from '@/ui';
 import LocaleSwitcher from '@/ui/locale-switcher';
+import { norikaNav, pm, rabbitNav, reveNav } from '@/utils';
 
 export const Footer = ({ dict }: { dict: { [key: string]: string } }) => {
   const d = dict;

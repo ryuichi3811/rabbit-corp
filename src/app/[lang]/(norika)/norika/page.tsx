@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import * as c from '@/features/norika/top'
+import * as c from '@/features/norika/top';
 import { Locale, fetchDict, setMetadata } from '@/utils';
 
 export const metadata: Metadata = setMetadata('徳薫');

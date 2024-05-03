@@ -24,15 +24,15 @@ const Layout = async ({
           <div className={`${robotoMono.className} bg-reve-main`}>
             <Suspense fallback={<div>Loading...</div>}>
               {/* <ParticleBackground option={option}> */}
-                <div className="pt-4">
-                  <Header />
-                </div>
-                <div className={`min-h-[calc(100vh-96px-320px)] w-full pt-24`}>
-                  {children}
-                </div>
+              <div className="pt-4">
+                <Header />
+              </div>
+              <div className={`min-h-[calc(100vh-96px-320px)] w-full pt-24`}>
+                {children}
+              </div>
               {/* </ParticleBackground> */}
             </Suspense>
-            <Footer  dict={d}/>
+            <Footer dict={d} />
           </div>
         </div>
       </body>

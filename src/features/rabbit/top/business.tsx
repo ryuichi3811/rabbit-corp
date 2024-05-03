@@ -1,7 +1,7 @@
-import { Button } from '@/ui';
-import { pmNorika, pmReve } from '@/utils';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Button } from '@/ui';
+import { pmNorika, pmReve } from '@/utils';
 
 export const Business = ({ dict }: { dict: { [key: string]: string } }) => {
   const d = dict;
@@ -10,7 +10,7 @@ export const Business = ({ dict }: { dict: { [key: string]: string } }) => {
       <div className="container mx-auto px-5 pb-10 pt-24">
         <div className="mb-20 flex w-full flex-wrap justify-center">
           <div className="mb-6 w-full lg:mb-0 lg:w-1/2">
-            <h1 className="title-font mb-2 text-2xl font-semibold md:pl-8 text-gray-900 sm:text-3xl">
+            <h1 className="title-font mb-2 text-2xl font-semibold text-gray-900 sm:text-3xl md:pl-8">
               {d.rabbit_top_business_title}
             </h1>
             <div className="h-1 w-20 rounded bg-rose-700 md:ml-8"></div>

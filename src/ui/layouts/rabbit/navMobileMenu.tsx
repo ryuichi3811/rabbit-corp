@@ -18,10 +18,10 @@ export const NavMobileMenu = () => {
   const lang = usePathname().substring(1).split('/').shift();
   return (
     <div className="relative">
-      <div className="fixed z-50 right-20 top-9 lg:hidden">
+      <div className="fixed right-20 top-9 z-50 lg:hidden">
         <Link
           className="flex h-10 w-10 items-center justify-center rounded-xl bg-pink-800 text-xl tracking-widest text-white hover:bg-pink-700 focus:bg-pink-700 focus:ring-2 focus:ring-opacity-50 focus:ring-offset-2 active:bg-pink-700"
-          href={pm(lang!, '/contact')}
+          href={pm(lang!, '/contact#top')}
         >
           <EnvelopeClosedIcon className="h-6 w-6 text-white" />
         </Link>
@@ -63,7 +63,7 @@ export const NavMobileMenu = () => {
                   key={n.label}
                   className="text-slate-700 duration-300 [&+li]:mt-4"
                 >
-                  <Link href={n.href} onClick={handleClick}>
+                  <Link href={n.href + '#top'} onClick={handleClick}>
                     {n.label === 'contact' ? (
                       <Button
                         variant={'default'}

@@ -34,7 +34,7 @@ export const LatestNews = async ({
         <div className="mt-8 flex w-full flex-wrap justify-center gap-4 overflow-auto align-baseline md:flex-wrap md:gap-10 xl:gap-16">
           {contents.map((c: News) => (
             <NewsItemVertical
-             className="text-rose-300 hover:text-rose-500 active:text-rose-500"
+              className="text-rose-300 hover:text-rose-500 active:text-rose-500"
               dict={d}
               content={c}
               link={pmNorika(d.lang, `/news/0/${c.id}`)}
@@ -44,7 +44,10 @@ export const LatestNews = async ({
         </div>
         {/* News ページ遷移ボタン */}
         <Link href={pmNorika(d.lang, '/news/1')}>
-          <Button size={'lg'} className="mt-8 bg-rose-500 hover:bg-rose-400 active:bg-rose-400">
+          <Button
+            size={'lg'}
+            className="mt-8 bg-rose-500 hover:bg-rose-400 active:bg-rose-400"
+          >
             {d.reve_top_news_button_text}
           </Button>
         </Link>

@@ -1,6 +1,6 @@
 'use client';
-import { AspectRatio } from '@/ui';
 import Image from 'next/image';
+import { AspectRatio } from '@/ui';
 
 export const Contents = ({ dict }: { dict: { [key: string]: string } }) => {
   const d = dict;
@@ -18,7 +18,7 @@ export const Contents = ({ dict }: { dict: { [key: string]: string } }) => {
           </div>
         </div>
         <div className="-mx-4 -mb-10 -mt-4 flex flex-wrap sm:-m-4">
-          <div id='body' className="mb-6 px-4 py-4 sm:mb-0 md:w-1/3 md:px-8">
+          <div id="body" className="mb-6 px-4 py-4 sm:mb-0 md:w-1/3 md:px-8">
             <div className="min-h-64 overflow-hidden rounded-lg">
               <AspectRatio ratio={4 / 3}>
                 <Image
@@ -37,7 +37,7 @@ export const Contents = ({ dict }: { dict: { [key: string]: string } }) => {
               {d.norika_about_service_description_1}
             </p>
           </div>
-          <div id='face' className="mb-6 px-4 py-4 sm:mb-0 md:w-1/3 md:px-8">
+          <div id="face" className="mb-6 px-4 py-4 sm:mb-0 md:w-1/3 md:px-8">
             <div className="min-h-64 overflow-hidden rounded-lg">
               <AspectRatio ratio={4 / 3}>
                 <Image
@@ -56,7 +56,7 @@ export const Contents = ({ dict }: { dict: { [key: string]: string } }) => {
               {d.norika_about_service_description_2}
             </p>
           </div>
-          <div id='heart' className="mb-6 px-4 py-4 sm:mb-0 md:w-1/3 md:px-8">
+          <div id="heart" className="mb-6 px-4 py-4 sm:mb-0 md:w-1/3 md:px-8">
             <div className="min-h-64 overflow-hidden rounded-lg">
               <AspectRatio ratio={4 / 3}>
                 <Image

@@ -29,11 +29,11 @@ export const NavScreenMenu = ({ path }: { path?: string }) => {
           <li
             key={n.label}
             className={clsx(
-              'mx-4 text-center text-amber-100 duration-300 hover:text-amber-200 cursor-pointer',
+              'mx-4 cursor-pointer text-center text-amber-100 duration-300 hover:text-amber-200',
               cPath() === n.label && 'text-reve-main',
             )}
           >
-            <Link href={pm(lang, n.href)}>
+            <Link href={pm(lang, n.href + '#top')}>
               <span className="text-lg">{n.sub}</span>
               <p className="text-sm tracking-wider">{n.name}</p>
             </Link>

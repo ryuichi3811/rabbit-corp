@@ -1,7 +1,7 @@
 'use client';
 
-import { AspectRatio } from '@/ui';
 import Image from 'next/image';
+import { AspectRatio } from '@/ui';
 
 export const Greeting = ({ dict }: { dict: { [key: string]: string } }) => {
   const d = dict;
@@ -15,13 +15,15 @@ export const Greeting = ({ dict }: { dict: { [key: string]: string } }) => {
           height={100}
         />
       </div>
-      <section className="container py-12 text-slate-700 max-w-screen-lg">
-        <h2 className='text-2xl text-center font-bold md:pt-8 pb-12'>{d.norika_top_greeting_title}</h2>
-        <div className="flex-col md:flex-row flex items-center justify-around">
+      <section className="container max-w-screen-lg py-12 text-slate-700">
+        <h2 className="pb-12 text-center text-2xl font-bold md:pt-8">
+          {d.norika_top_greeting_title}
+        </h2>
+        <div className="flex flex-col items-center justify-around md:flex-row">
           <div className="w-64">
             <AspectRatio ratio={3 / 4}>
               <Image
-              className='rounded-3xl'
+                className="rounded-3xl"
                 src={'/images/norika/owner.jpg'}
                 alt="owner image"
                 width={1108}
@@ -30,8 +32,9 @@ export const Greeting = ({ dict }: { dict: { [key: string]: string } }) => {
             </AspectRatio>
           </div>
           <div className="w-full md:w-1/2">
-            
-            <p className='font-medium text-base leading-loose mt-12 md:mt-auto'>{d.norika_top_greeting_description}</p>
+            <p className="mt-12 text-base font-medium leading-loose md:mt-auto">
+              {d.norika_top_greeting_description}
+            </p>
           </div>
         </div>
       </section>

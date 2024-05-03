@@ -1,8 +1,8 @@
 export const Header = () => {
   return (
     <>
-      <div className="bg-[url('/svgs/norika/header/contacts.svg')] relative h-[13rem] md:h-[26rem] bg-center bg-cover py-6 sm:py-8 lg:py-24 mt-24 max-w-screen-xl mx-auto flex justify-center">
-        <div className="px-4 md:px-8 absolute -top-20">
+      <div className="relative mx-auto mt-24 flex h-[13rem] max-w-screen-xl justify-center bg-[url('/svgs/norika/header/contacts.svg')] bg-cover bg-center py-6 sm:py-8 md:h-[26rem] lg:py-24">
+        <div className="absolute -top-20 px-4 md:px-8">
           <div className="rounded-lg p-4">
             <p className="mb-2 text-center font-semibold text-rose-500 md:mb-3 lg:text-lg">
               Introducing

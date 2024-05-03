@@ -34,12 +34,18 @@ export const NavScreenMenu = ({ path }: { path?: string }) => {
             )}
           >
             {n.label === 'contact' ? (
-              <Link href={pm(lang, n.href)} className='text-pink-700 font-bold hover:text-pink-500'>
+              <Link
+                href={pm(lang, n.href + '#top')}
+                className="font-bold text-pink-700 hover:text-pink-500"
+              >
                 <p className="text-xl">{n.name}</p>
                 <span className="text-xs">{n.sub}</span>
               </Link>
             ) : (
-              <Link href={pm(lang, n.href)} className='text-slate-700 hover:text-slate-400'>
+              <Link
+                href={pm(lang, n.href + '#top')}
+                className="text-slate-700 hover:text-slate-400"
+              >
                 <p className="text-xl">{n.name}</p>
                 <span className="text-xs">{n.sub}</span>
               </Link>

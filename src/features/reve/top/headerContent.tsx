@@ -6,7 +6,7 @@ export const Header = ({ dict }: { dict: { [key: string]: string } }) => {
       {/* 画像 */}
       <div className="absolute bottom-0 right-0 h-full w-full bg-no-repeat [background-size:100%] md:bottom-auto md:right-[5%] md:h-[86.5%] md:w-2/3 md:bg-[url('/images/reve/top-header.webp')]  md:bg-bottom lg:h-[82.5%] xl:h-[78.5%] xl:w-1/2"></div>
       {/* 見出し */}
-      <div className="absolute md:top-auto left-4 md:left-[5%]">
+      <div className="absolute left-4 md:left-[5%] md:top-auto">
         <section>
           <h1 className="animate-text-shadow-drop-br text-[13.8vw] font-bold leading-snug tracking-tighter md:mt-5 md:text-8xl md:leading-normal md:tracking-wide xl:text-9xl">
             <span className="block md:pb-4 lg:pb-8 xl:pb-4">
