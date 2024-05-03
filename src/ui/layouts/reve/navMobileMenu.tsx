@@ -20,7 +20,7 @@ export const NavMobileMenu = () => {
     <div className="relative">
       <div className="fixed right-20 top-9 z-50 lg:hidden">
         <Link
-          className="flex h-10 w-10 items-center justify-center rounded-xl bg-reve-color text-xl tracking-widest text-white hover:bg-reve-color/80 focus:bg-reve-color/80 focus:ring-2 focus:ring-opacity-50 focus:ring-offset-2 active:bg-reve-color/80"
+          className="flex h-10 w-10 items-center justify-center rounded-xl bg-reve-color text-xl tracking-widest text-white hover:bg-reve-color/90 focus:bg-reve-color/80 focus:ring-2 focus:ring-opacity-50 focus:ring-offset-2 active:bg-reve-color/80"
           href={pmReve(lang!, '/contact')}
         >
           <EnvelopeClosedIcon className="h-6 w-6 text-reve-sub" />
