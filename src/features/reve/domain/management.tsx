@@ -9,11 +9,11 @@ export const TalentManagement = ({
   return (
     <div className="relative z-10 mb-32 w-full">
       {/* Header start */}
-      <div className="relative flex justify-center py-24">
+      <div className="relative flex justify-center py-24 backdrop-blur-md">
         <h1 className="relative z-10 text-center text-3xl md:text-4xl xl:text-5xl">
           Management
         </h1>
-        <div className="absolute inset-0 h-[15rem] w-full bg-[url('/images/reve/domain/management.webp')] bg-cover opacity-35 backdrop-blur-md"></div>
+        <div className="absolute inset-0 h-[15rem] w-full bg-[url('/images/reve/domain/management.webp')] bg-cover opacity-35"></div>
         <div className="absolute -right-16 top-24 h-0 w-44 rotate-90 border-b-2 border-reve-sub sm:right-0 md:right-[10%]"></div>
         <div className="absolute -left-16 bottom-24 h-0 w-44 rotate-90 border-b-2 border-reve-sub sm:left-0 md:left-[10%]"></div>
         <div className="absolute left-0 top-20 h-0 w-52 border-b-2 border-reve-sub sm:left-0 md:left-[10%] lg:w-1/3"></div>
