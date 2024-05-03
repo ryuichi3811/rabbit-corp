@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { url } from '@/utils';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: URL + '/sitemap.xml',
+    sitemap: url + 'sitemap.xml',
   };
 }
