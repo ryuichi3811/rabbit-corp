@@ -3,8 +3,7 @@ import { ReactNode, Suspense } from 'react';
 import { robotoMono } from '@/styles/fonts';
 import { Footer, Header } from '@/ui/layouts/reve';
 import { Locale } from '@/utils';
-import { ParticleBackground } from '@/utils/particles';
-import { particlesOption } from '@/utils/particles/option';
+import { fetchDict } from '@/utils';
 // import { optionsStars } from '@/utils/particles/option';
 
 const Layout = async ({
@@ -16,6 +15,7 @@ const Layout = async ({
 }) => {
   // const option = optionsStars();
   // const option = particlesOption;
+  const d = await fetchDict(lang);
   return (
     <html lang={lang}>
       <body>
@@ -32,7 +32,7 @@ const Layout = async ({
                 </div>
               {/* </ParticleBackground> */}
             </Suspense>
-            <Footer />
+            <Footer  dict={d}/>
           </div>
         </div>
       </body>

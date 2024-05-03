@@ -4,13 +4,49 @@ export const particlesOption: ISourceOptions = {
   // background: {
   //   color: '#000',
   // },
+  fullScreen: {
+    enable: true,
+    zIndex: 0,
+  },
   particles: {
     color: {
-      value: ["#3998D0", "#2EB6AF", "#A9BD33", "#FEC73B", "#F89930", "#F45623", "#D62E32", "#EB586E", "#9952CF"],
+      value: [
+        '#3998D0',
+        '#2EB6AF',
+        '#A9BD33',
+        '#FEC73B',
+        '#F89930',
+        '#F45623',
+        '#D62E32',
+        '#EB586E',
+        '#9952CF',
+      ],
     },
     number: {
       value: 200,
     },
+    // interactivity: {
+    //   events: {
+    // onClick: {
+    //   enable: true,
+    //   mode: 'push',
+    // },
+    //   onHover: {
+    //     enable: true,
+    //     mode: 'repulse',
+    //   },
+    // },
+    // modes: {
+    //   bubble: {
+    //     distance: 400,
+    //     opacity: 1,
+    //     size: 40,
+    //   },
+    //   push: {
+    //     quantity: 4,
+    //   },
+    // },
+    // },
     move: {
       direction: 'none',
       enable: true,

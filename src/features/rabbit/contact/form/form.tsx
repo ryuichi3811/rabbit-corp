@@ -7,6 +7,8 @@ import { mailAction } from '@/actions';
 import { initialState } from '@/providers/resend';
 import { Input, Label, Textarea } from '@/ui';
 import * as S from '@/ui/select';
+import Link from 'next/link';
+import { pm } from '@/utils';
 
 export const Form = ({ dict }: { dict: { [key: string]: string } }) => {
   const d = dict;
@@ -107,6 +109,32 @@ export const Form = ({ dict }: { dict: { [key: string]: string } }) => {
             cols={30}
             rows={10}
           />
+
+          
+<div className="mb-5">
+            <input
+              type="checkbox"
+              id="privacyPolicy"
+              required
+            />
+            <label htmlFor="privacyPolicy" className="ml-2">
+              {d.lang === 'ja' ? (
+                <>
+                  <Link href={pm(d.lang, '/privacy-policy')} target="_blank" className='text-pink-500 border-b border-pink-500 hover:text-pink-700 px-2'>
+                    {d.form_privacy_policy_agreement_link}
+                  </Link>
+                  {d.form_privacy_policy_agreement}
+                </>
+              ) : (
+                <>
+                  {d.form_privacy_policy_agreement}
+                  <Link href={pm(d.lang, '/privacy-policy')} target="_blank" className='text-pink-500 border-b border-pink-500 hover:text-pink-700 px-2'>
+                    {d.form_privacy_policy_agreement_link}
+                  </Link>
+                </>
+              )}
+            </label>
+          </div>
 
           {/* ------------------------------------------------------------- */}
           {/* 言語 */}

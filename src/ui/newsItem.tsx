@@ -118,7 +118,7 @@ export const NewsItemHorizontal = ({
           </div>
 
           {/* タイトル */}
-          <h2 className="max-h-11 overflow-hidden text-base font-bold text-gray-800 md:text-xl">
+          <h2 className="max-h-11 text-base font-bold text-gray-800 md:text-xl">
             <Link
               href={link}
               className="transition duration-100 hover:text-indigo-500 active:text-indigo-600"

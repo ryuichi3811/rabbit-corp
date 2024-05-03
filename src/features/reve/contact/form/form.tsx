@@ -7,6 +7,8 @@ import { mailAction } from '@/actions';
 import { initialState } from '@/providers/resend';
 import { Input, Label, Textarea } from '@/ui';
 import * as S from '@/ui/select';
+import Link from 'next/link';
+import { pm } from '@/utils';
 
 export const Form = ({ dict }: { dict: { [key: string]: string } }) => {
   const d = dict;
@@ -14,7 +16,7 @@ export const Form = ({ dict }: { dict: { [key: string]: string } }) => {
   const [state, dispatch] = useFormState(mailAction, initialState);
   return (
     <>
-      <div className="pb-20 pt-16 flex flex-col items-center">
+      <div className="flex flex-col items-center pb-20 pt-16 backdrop-blur-md">
         <form
           action={dispatch}
           ref={ref}
@@ -104,6 +106,31 @@ export const Form = ({ dict }: { dict: { [key: string]: string } }) => {
             cols={30}
             rows={10}
           />
+
+          <div className="mb-5">
+            <input
+              type="checkbox"
+              id="privacyPolicy"
+              required
+            />
+            <label htmlFor="privacyPolicy" className="ml-2">
+              {d.lang === 'ja' ? (
+                <>
+                  <Link href={pm(d.lang, '/privacy-policy')} target="_blank" className='text-indigo-500 border-b border-indigo-500 hover:text-indigo-700 px-2'>
+                    {d.form_privacy_policy_agreement_link}
+                  </Link>
+                  {d.form_privacy_policy_agreement}
+                </>
+              ) : (
+                <>
+                  {d.form_privacy_policy_agreement}
+                  <Link href={pm(d.lang, '/privacy-policy')} target="_blank" className='text-indigo-500 border-b border-indigo-500 hover:text-indigo-700 px-2'>
+                    {d.form_privacy_policy_agreement_link}
+                  </Link>
+                </>
+              )}
+            </label>
+          </div>
 
           {/* ------------------------------------------------------------- */}
           {/* 言語 */}

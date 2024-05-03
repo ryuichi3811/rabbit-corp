@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import * as C from '@/features/reve/contact';
 import { Locale, fetchDict, mReveContact, setMetadata } from '@/utils';
-import { particlesOption } from '@/utils/particles/option';
 import { ParticleBackground } from '@/utils/particles';
+import { particlesOption } from '@/utils/particles/option/fullScreen';
 
 export const metadata: Metadata = setMetadata('Reve Contact', mReveContact);
 
@@ -12,12 +12,10 @@ const Page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   return (
     <main>
       <ParticleBackground option={option}>
-
-      <C.Header />
-      <div className="relative backdrop-blur-md">
-
-      <C.Form dict={d} />
-      </div>
+        <C.Header />
+        <div className="relative backdrop-blur-md">
+          <C.Form dict={d} />
+        </div>
       </ParticleBackground>
     </main>
   );

@@ -1,8 +1,7 @@
 import { Metadata } from 'next';
 import * as Cnt from '@/features/reve/top';
 import { Locale, fetchDict, setMetadata } from '@/utils';
-import { ParticleBackground } from '@/utils/particles';
-import { particlesOption } from '@/utils/particles/option';
+import { ParticleBackground, particlesOption } from '@/utils/particles';
 
 export const metadata: Metadata = setMetadata('Reve');
 
@@ -14,6 +13,7 @@ const Page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
       <main>
         <Cnt.Header dict={d} />
         <Cnt.LatestNews dict={d} />
+        <Cnt.Domain dict={d} />
       </main>
     </ParticleBackground>
   );

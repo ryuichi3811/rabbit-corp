@@ -14,6 +14,8 @@ import {
   Textarea,
 } from '@/ui';
 import * as S from '@/ui/select';
+import Link from 'next/link';
+import { pm } from '@/utils';
 
 export const Form = ({ dict }: { dict: { [key: string]: string } }) => {
   const d = dict;
@@ -61,15 +63,15 @@ export const Form = ({ dict }: { dict: { [key: string]: string } }) => {
           >
             <div className="flex items-center space-x-2">
               <RadioGroupItem value="男性" id="gender_1" />
-              <Label htmlFor="gender_1">男性</Label>
+              <Label htmlFor="gender_1">{d.norika_contact_form_gender_male}</Label>
             </div>
             <div className="flex items-center space-x-2">
               <RadioGroupItem value="女性" id="gender_2" />
-              <Label htmlFor="gender_2">女性</Label>
+              <Label htmlFor="gender_2">{d.norika_contact_form_gender_female}</Label>
             </div>
             <div className="flex items-center space-x-2">
               <RadioGroupItem value="その他" id="gender_3" />
-              <Label htmlFor="gender_3">その他</Label>
+              <Label htmlFor="gender_3">{d.norika_contact_form_gender_other}</Label>
             </div>
           </RadioGroup>
 
@@ -148,6 +150,35 @@ export const Form = ({ dict }: { dict: { [key: string]: string } }) => {
             cols={30}
             rows={10}
           />
+
+          <div className="mb-5">
+            <input type="checkbox" id="privacyPolicy" required />
+            <label htmlFor="privacyPolicy" className="ml-2">
+              {d.lang === 'ja' ? (
+                <>
+                  <Link
+                    href={pm(d.lang, '/privacy-policy')}
+                    target="_blank"
+                    className="border-b border-rose-500 px-2 text-rose-500 hover:text-rose-700"
+                  >
+                    {d.form_privacy_policy_agreement_link}
+                  </Link>
+                  {d.form_privacy_policy_agreement}
+                </>
+              ) : (
+                <>
+                  {d.form_privacy_policy_agreement}
+                  <Link
+                    href={pm(d.lang, '/privacy-policy')}
+                    target="_blank"
+                    className="border-b border-rose-500 px-2 text-rose-500 hover:text-rose-700"
+                  >
+                    {d.form_privacy_policy_agreement_link}
+                  </Link>
+                </>
+              )}
+            </label>
+          </div>
 
           {/* ------------------------------------------------------------- */}
           {/* 言語 */}

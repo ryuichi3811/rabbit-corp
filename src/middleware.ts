@@ -74,10 +74,6 @@ export async function middleware(request: NextRequest) {
   }
 
   switch (pathname) {
-    case `/ja/reve/about`:
-      return redirect(pmReve('ja', '/about/management'));
-    case `/en/reve/about`:
-      return redirect(pmReve('en', '/about/management'));
     case `/ja/reve/news`:
       return redirect(pmReve('ja', '/news/1'));
     case `/en/reve/news`:
