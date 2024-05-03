@@ -14,7 +14,7 @@ export const setMetadata = (
   return {
     title: {
       default: t,
-      template: `%s | ${defaultTitle}`,
+      template: `%s`,
     },
     description: d,
   };
