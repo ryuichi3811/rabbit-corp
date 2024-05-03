@@ -26,7 +26,7 @@ export const ContentsController = ({
       </div>
       {/* アニメーション制作 */}
       <div className={clsx(tab === 'animation' ? 'block' : 'hidden')}>
-        <c.Animation dict={d} />
+        {/* <c.Animation dict={d} /> */}
       </div>
     </div>
   );
