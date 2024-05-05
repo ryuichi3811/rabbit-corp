@@ -95,10 +95,7 @@ export const NewsItemHorizontal = ({
         >
           <AspectRatio ratio={1}>
             <Image
-              // src={c.head_image.url}
-              src={
-                'https://images.microcms-assets.io/assets/9a0fcdad42894b26bb37bc2a647c48b5/dd07c76d76314295aefe57b7c6a07439/reve-default-header-image.png'
-              }
+              src={c.head_image.url}
               width={c.head_image.width}
               height={c.head_image.height}
               loading="lazy"
