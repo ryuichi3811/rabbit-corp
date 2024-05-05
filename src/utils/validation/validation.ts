@@ -115,7 +115,7 @@ export const checkTelNumber = (
   input: FormDataEntryValue | null,
   local: FormDataEntryValue | null,
 ) => {
-  const regex = /^\+?\d+$/;
+  const regex = /^\+?\d{1,4}[-]?\d{1,4}[-]?\d{1,4}[-]?\d{1,4}$/;
   const blank_message_ja = '必須項目が未入力です。';
   const blank_message_en = 'Required fields have not been filled in.';
   const message_ja = '電話番号を入力してください。';
