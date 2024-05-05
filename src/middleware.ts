@@ -43,6 +43,7 @@ export async function middleware(request: NextRequest) {
       '/svgs/',
       '/sitemap.xml',
       '/robots.txt',
+      '/manifest.webmanifest',
     ].includes(pathname)
   )
     return;
