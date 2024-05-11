@@ -1,11 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
 import { Button } from '@/ui';
 
 const NotFound = () => {
   const params = useParams();
+  const organization = usePathname().substring(1).split('/')[1];
+
   return (
     // 真ん中寄せ
     <div className="flex w-full justify-center">
@@ -22,7 +24,7 @@ const NotFound = () => {
         </div>
 
         <Link
-          href={`/${params.lang}`}
+          href={`/${params.lang}/${organization}`}
           className="mb-10 mt-20 flex w-full justify-center"
         >
           <Button className="flex w-full flex-col py-7">

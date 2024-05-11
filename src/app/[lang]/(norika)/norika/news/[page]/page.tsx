@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import * as C from '@/features/norika/news';
 import { fetchNewsCntList, qNorika } from '@/providers';
 import { PaginationLayout } from '@/ui/layouts';
-import { Locale, fetchDict, mNorikaNews, pmReve, setMetadata } from '@/utils';
+import { Locale, fetchDict, mNorikaNews, pmNorika, setMetadata } from '@/utils';
 
 export const metadata: Metadata = setMetadata('徳薫 News', mNorikaNews);
 
@@ -38,7 +38,7 @@ const Page = async ({
       <C.Overview dict={d} contents={nc.contents} />
       <PaginationLayout
         totalCount={nc.totalCount}
-        link={pmReve(lang, '/news/1')}
+        link={pmNorika(lang, '/news/1')}
       />
     </main>
   );
