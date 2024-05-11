@@ -22,10 +22,10 @@ const NotFound = () => {
         </div>
 
         <Link
-          href={`/${params.lang}`}
+          href={`/${params.lang}/norika`}
           className="mb-10 mt-20 flex w-full justify-center"
         >
-          <Button className="flex w-full flex-col py-7">
+          <Button className="flex w-full flex-col bg-rose-400 py-7 hover:bg-rose-300 active:bg-rose-200">
             <span className="text-xs">Return Top</span>
             <span className="text-base">トップに戻る</span>
           </Button>

@@ -39,7 +39,7 @@ const Page = async ({
         <C.Overview dict={d} contents={nc.contents} />
         <PaginationLayout
           totalCount={nc.totalCount}
-          link={pmReve(lang, '/news/1')}
+          link={pmReve(lang, '/news')}
         />
       </div>
     </main>
