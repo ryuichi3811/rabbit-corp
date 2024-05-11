@@ -22,7 +22,10 @@ export const Header = ({
       </div>
       {/* ヘッダー画像 */}
       <div className="my-8">
-        <AspectRatio ratio={8 / 5}>
+        <AspectRatio
+          ratio={8 / 5}
+          className="relative overflow-hidden rounded-xl"
+        >
           <Image
             src={cnt.head_image.url}
             // src={
@@ -31,7 +34,7 @@ export const Header = ({
             width={cnt.head_image.width}
             height={cnt.head_image.height}
             alt={`${cnt.title_ja} ヘッダー画像`}
-            className="rounded-xl"
+            className="absolute inset-0 h-full w-full rounded-md object-cover object-center transition duration-200 group-hover:scale-110"
           />
         </AspectRatio>
       </div>

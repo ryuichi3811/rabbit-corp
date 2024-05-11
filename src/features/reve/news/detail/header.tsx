@@ -21,16 +21,19 @@ export const Header = ({
       </div>
       {/* ヘッダー画像 */}
       <div className="my-8">
-        <AspectRatio ratio={8 / 5}>
+        <AspectRatio
+          ratio={8 / 5}
+          className="relative overflow-hidden rounded-xl"
+        >
           <Image
             src={cnt.head_image.url}
             // src={
             //   'https://images.microcms-assets.io/assets/9a0fcdad42894b26bb37bc2a647c48b5/dd07c76d76314295aefe57b7c6a07439/reve-default-header-image.png'
             // }
-            width={800}
-            height={500}
+            width={cnt.head_image.width}
+            height={cnt.head_image.height}
             alt={`${cnt.title_ja} ヘッダー画像`}
-            className="rounded-md"
+            className="absolute inset-0 h-full w-full rounded-md object-cover object-center transition duration-200 group-hover:scale-110"
           />
         </AspectRatio>
       </div>
