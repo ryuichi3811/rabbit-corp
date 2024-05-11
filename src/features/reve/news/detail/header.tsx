@@ -27,8 +27,8 @@ export const Header = ({
             // src={
             //   'https://images.microcms-assets.io/assets/9a0fcdad42894b26bb37bc2a647c48b5/dd07c76d76314295aefe57b7c6a07439/reve-default-header-image.png'
             // }
-            width={cnt.head_image.width}
-            height={cnt.head_image.height}
+            width={800}
+            height={500}
             alt={`${cnt.title_ja} ヘッダー画像`}
             className="rounded-md"
           />
