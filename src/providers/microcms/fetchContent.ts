@@ -6,6 +6,9 @@ import { News, client } from '.';
 // News 一覧取得
 export const fetchNewsCntList = cache(async (queries?: MicroCMSQueries) => {
   const listData = await client.getList<News>({
+    customRequestInit: {
+      cache: 'no-store',
+    },
     endpoint: 'news',
     queries,
   });
