@@ -1,15 +1,16 @@
 'use server';
 import { MicroCMSQueries } from 'microcms-js-sdk';
+import { cache } from 'react';
 import { News, client } from '.';
 
 // News 一覧取得
-export const fetchNewsCntList = async (queries?: MicroCMSQueries) => {
+export const fetchNewsCntList = cache(async (queries?: MicroCMSQueries) => {
   const listData = await client.getList<News>({
     endpoint: 'news',
     queries,
   });
   return listData;
-};
+});
 
 // News特定コンテンツ取得
 export const fetchNewsCnt = async (
