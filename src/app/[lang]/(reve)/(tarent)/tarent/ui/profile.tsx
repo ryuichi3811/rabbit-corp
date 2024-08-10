@@ -2,7 +2,8 @@
 
 import clsx from 'clsx';
 import Autoplay from 'embla-carousel-autoplay';
-import { AspectRatio } from '@/ui';
+import Link from 'next/link';
+import { AspectRatio, Button } from '@/ui';
 import { Carousel, CarouselContent, CarouselItem } from '@/ui/carousel';
 
 export type Profile = {
@@ -117,8 +118,13 @@ export const ProfileSection = ({ profile }: { profile: Profile }) => {
       {/* Profile end */}
       <div className="px-4 pb-32">
         <h2 className="pb-8 text-center text-2xl font-bold">メッセージ</h2>
-        <div className="mx-auto max-w-screen-md">
+        <div className="mx-auto max-w-screen-lg rounded-xl border bg-white px-4 py-6">
           <p>{p.comments}</p>
+        </div>
+        <div className="flex justify-center pt-16">
+          <Button size={'lg'} variant={'default'} asChild>
+            <Link href="profile">一覧に戻る</Link>
+          </Button>
         </div>
       </div>
     </section>
