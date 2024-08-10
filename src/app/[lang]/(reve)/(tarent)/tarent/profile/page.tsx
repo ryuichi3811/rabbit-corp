@@ -33,7 +33,7 @@ const Page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
       </div>
       <div className={`min-h-[calc(100vh-96px-320px)] w-full pb-32 pt-24`}>
         <div className="pt-12 md:pb-12">
-          <h1 className='text-4xl text-center'>タレント一覧</h1>
+          <h1 className="text-center text-4xl">タレント一覧</h1>
         </div>
         <div className="grid grid-cols-1 justify-items-center px-4 sm:grid-cols-2 md:grid-cols-3">
           {profiles.map((profile, i) => (

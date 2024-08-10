@@ -17,7 +17,6 @@ type CarouselProps = {
   opts?: CarouselOptions;
   plugins?: CarouselPlugin;
   orientation?: 'horizontal' | 'vertical';
-  setApi?: (api: CarouselApi) => void;
 };
 
 type CarouselContextProps = {
@@ -49,7 +48,6 @@ const Carousel = React.forwardRef<
     {
       orientation = 'horizontal',
       opts,
-      setApi,
       plugins,
       className,
       children,
@@ -98,14 +96,6 @@ const Carousel = React.forwardRef<
     );
 
     React.useEffect(() => {
-      if (!api || !setApi) {
-        return;
-      }
-
-      setApi(api);
-    }, [api, setApi]);
-
-    React.useEffect(() => {
       if (!api) {
         return;
       }
@@ -123,7 +113,7 @@ const Carousel = React.forwardRef<
       <CarouselContext.Provider
         value={{
           carouselRef,
-          api: api,
+          api,
           opts,
           orientation:
             orientation || (opts?.axis === 'y' ? 'vertical' : 'horizontal'),
@@ -232,7 +222,7 @@ const CarouselNext = React.forwardRef<
       className={cn(
         'absolute h-8 w-8 rounded-full',
         orientation === 'horizontal'
-          ? 'right-12 -bottom-16 -translate-y-1/2'
+          ? '-bottom-16 right-12 -translate-y-1/2'
           : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',
         className,
       )}
