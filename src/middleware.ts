@@ -39,6 +39,7 @@ export async function middleware(request: NextRequest) {
       '/icon.svg',
       '/apple-icon.png',
       '/images/',
+      '/tarent/',
       '/movies/',
       '/svgs/',
       '/sitemap.xml',
@@ -94,5 +95,7 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   // Matcher ignoring `/_next/` and `/api/`
-  matcher: ['/((?!api|_next/static|_next/image|logo|images|movies|svgs).*)'],
+  matcher: [
+    '/((?!api|_next/static|_next/image|logo|images|movies|tarent|svgs).*)',
+  ],
 };

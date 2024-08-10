@@ -13,14 +13,11 @@ const Layout = async ({
   children: ReactNode;
   params: { lang: Locale };
 }) => {
-  // const option = optionsStars();
-  // const option = particlesOption;
   const d = await fetchDict(lang);
   return (
     <div className="w-full">
       <div className={`${robotoMono.className} bg-reve-main`}>
         <Suspense fallback={<div>Loading...</div>}>
-          {/* <ParticleBackground option={option}> */}
           <div className="pt-4">
             <Header />
           </div>
@@ -30,7 +27,6 @@ const Layout = async ({
           >
             {children}
           </div>
-          {/* </ParticleBackground> */}
         </Suspense>
         <Footer dict={d} />
       </div>
