@@ -5,67 +5,67 @@ import { url } from '@/utils';
 const sitemap_base = (lang: string): MetadataRoute.Sitemap => {
   return [
     {
-      url: `${url}/${lang}`,
+      url: `${url}${lang}`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 1,
     },
     {
-      url: `${url}/${lang}/reve`,
+      url: `${url}${lang}/reve`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: `${url}/${lang}/norika`,
+      url: `${url}${lang}/norika`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 1,
     },
     {
-      url: `${url}/${lang}/about`,
+      url: `${url}${lang}/about`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
-      url: `${url}/${lang}/contact`,
+      url: `${url}${lang}/contact`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.2,
     },
     {
-      url: `${url}/${lang}/reve/domain`,
+      url: `${url}${lang}/reve/domain`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
-      url: `${url}/${lang}/reve/domain/management`,
+      url: `${url}${lang}/reve/domain/management`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
-      url: `${url}/${lang}/reve/contact`,
+      url: `${url}${lang}/reve/contact`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
-      url: `${url}/${lang}/norika/about`,
+      url: `${url}${lang}/norika/about`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
-      url: `${url}/${lang}/norika/access`,
+      url: `${url}${lang}/norika/access`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
-      url: `${url}/${lang}/norika/contact`,
+      url: `${url}${lang}/norika/contact`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
@@ -93,14 +93,14 @@ const sitemap_content = async (
   // norika サイトマップ作成
   nc.contents.map((content: any) =>
     urls.push({
-      url: `${url}/${lang}/norika/news/0/${content.id}`,
+      url: `${url}${lang}/norika/news/0/${content.id}`,
       lastModified: content.updatedAt,
     }),
   );
   // reve サイトマップ作成
   rc.contents.map((content: any) =>
     urls.push({
-      url: `${url}/${lang}/reve/news/0/${content.id}`,
+      url: `${url}${lang}/reve/news/0/${content.id}`,
       lastModified: content.updatedAt,
     }),
   );
@@ -132,10 +132,10 @@ const sitemap_news_page = async (
   const urls: MetadataRoute.Sitemap = [];
 
   for (let i = 0; i < nPage; i++) {
-    urls.push({ url: `${url}/${lang}/norika/news/${i + 1}` });
+    urls.push({ url: `${url}${lang}/norika/news/${i + 1}` });
   }
   for (let i = 0; i < rPage; i++) {
-    urls.push({ url: `${url}/${lang}/reve/news/${i + 1}` });
+    urls.push({ url: `${url}${lang}/reve/news/${i + 1}` });
   }
 
   return urls;
