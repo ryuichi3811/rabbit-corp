@@ -23,7 +23,7 @@ export const Nagoya = ({ dict }: { dict: { [key: string]: string } }) => {
           <div className="relative flex min-h-80 w-full items-end justify-start overflow-hidden rounded-lg bg-gray-300 p-10 sm:mr-10 md:w-1/2 lg:w-2/3">
             <iframe
               className="absolute inset-0 h-[calc(100%)] w-full overflow-hidden border-none [&_div]:hidden"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6524.100954131303!2d136.94915447621352!3d35.15536185868139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037a9cd6671361%3A0xc4ef94079cff9fce!2z44CSNDY2LTA4NTMg5oSb55-l55yM5ZCN5Y-k5bGL5biC5pit5ZKM5Yy65bed5Y6f6YCa77yT5LiB55uu77yU4oiS77yRIOiNmOiLkeWNl-eUsOS7ow!5e0!3m2!1sja!2sjp!4v1728824650199!5m2!1sja!2sjp"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1032.941333942198!2d136.95124209290765!3d35.15526811431544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037a9cd6609273%3A0x584d44e470629e72!2z44CSNDY2LTA4NTMg5oSb55-l55yM5ZCN5Y-k5bGL5biC5pit5ZKM5Yy65bed5Y6f6YCa77yT5LiB55uu77yU!5e0!3m2!1sja!2sjp!4v1728824991457!5m2!1sja!2sjp"
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
