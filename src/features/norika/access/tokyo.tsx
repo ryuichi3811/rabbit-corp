@@ -34,6 +34,13 @@ export const Tokyo = ({ dict }: { dict: { [key: string]: string } }) => {
               <h3 className="title-font text-lg font-semibold tracking-widest md:text-xl">
                 {d.norika_access_address_title}
               </h3>
+              <p className="mt-6 pl-2">{d.norika_access_tokyo_address}</p>
+            </div>
+            <div className="mx-auto mt-6 h-0 w-11/12 border-b-2 border-rose-50"></div>
+            <div className="px-6">
+              <h3 className="title-font text-lg font-semibold tracking-widest md:text-xl">
+                {d.norika_access_address_how_to}
+              </h3>
               <p className="mt-6 pl-2">
                 {d.norika_access_tokyo_address_line_1}
               </p>
@@ -55,7 +62,7 @@ export const Tokyo = ({ dict }: { dict: { [key: string]: string } }) => {
                   height={24}
                 />
                 <Link
-                  href={'tel:052-838-5007'}
+                  href={'tel:080-3899-7382'}
                   className="border-b border-rose-300 text-rose-500"
                 >
                   {d.norika_access_phone_body}
